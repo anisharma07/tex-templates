@@ -1,0 +1,156 @@
+\documentclass[9pt,a4paper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{tgheros}
+\usepackage{titlesec}
+\usepackage{array}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{2em}
+\setlength{\columnseprule}{0.5pt}
+
+% Swiss Style: Thick rules, bold caps
+\titleformat{\section}
+  {\large\bfseries\uppercase}{}{0em}{}
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+
+\newcommand{\sectiontitle}[1]{
+    \vspace{8pt}
+    \hrule height 2pt
+    \vspace{2pt}
+    {\large\bfseries\uppercase{#1}}
+    \vspace{4pt}
+    \hrule height 0.5pt
+    \vspace{4pt}
+}
+
+\newcommand{\subsectiontitle}[1]{\textbf{#1}}
+
+\newcommand{\keyvalue}[2]{
+    \makebox[0.3\linewidth][l]{\textbf{#1}} \parbox[t]{0.65\linewidth}{#2} \par \vspace{2pt}
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{flushleft}
+    {\Huge\bfseries COMPLEXITY ANALYSIS} \\
+    {\Large CHEAT SHEET 01 / PORTRAIT SWISS}
+\end{flushleft}
+
+\vspace{10pt}
+\hrule height 4pt
+\vspace{10pt}
+
+\begin{multicols}{2}
+
+\sectiontitle{01. NOTATION}
+
+\keyvalue{$\Theta$}{Tight bound. Approx equal.}
+\keyvalue{$O$}{Upper bound. Less than or equal.}
+\keyvalue{$\Omega$}{Lower bound. Greater than or equal.}
+\keyvalue{$o$}{Strict upper. Strictly less.}
+\keyvalue{$\omega$}{Strict lower. Strictly greater.}
+
+\vspace{6pt}
+\textbf{Definitions:}
+
+\subsectiontitle{Big-Theta $\Theta(g(n))$}
+$c_1 g(n) \le f(n) \le c_2 g(n)$
+
+\subsectiontitle{Big-O $O(g(n))$}
+$f(n) \le c \cdot g(n)$
+
+\subsectiontitle{Big-Omega $\Omega(g(n))$}
+$c \cdot g(n) \le f(n)$
+
+\sectiontitle{02. HIERARCHY}
+
+\textbf{Slow Growth (Fast Algo):}
+$O(1), O(\lg n), O(\sqrt{n})$
+
+\vspace{2pt}
+\textbf{Medium Growth:}
+$O(n), O(n \lg n)$
+
+\vspace{2pt}
+\textbf{Fast Growth (Slow Algo):}
+$O(n^2), O(n^3), O(2^n), O(n!)$
+
+\sectiontitle{03. EXAMPLES}
+
+\keyvalue{$O(1)$}{Access, Push/Pop}
+\keyvalue{$O(\lg n)$}{Binary Search}
+\keyvalue{$O(n)$}{Linear Scan}
+\keyvalue{$O(n \lg n)$}{Merge Sort}
+\keyvalue{$O(n^2)$}{Nested Loops}
+\keyvalue{$O(2^n)$}{Recursion (Fib)}
+
+\sectiontitle{04. PROPERTIES}
+
+\textbf{Transitivity:}
+If $A=O(B)$ and $B=O(C)$, then $A=O(C)$.
+
+\textbf{Additivity:}
+$O(f) + O(g) \to O(\max(f, g))$
+
+\textbf{Multiplication:}
+$O(f) \times O(g) \to O(f \cdot g)$
+
+\columnbreak
+
+\sectiontitle{05. LIMITS}
+
+\textbf{Polynoms vs Exps:}
+Any exponential $a^n (a>1)$ beats any polynomial $n^b$.
+
+\textbf{Logs vs Polynoms:}
+Any polynomial $n^a (a>0)$ beats any poly-log $\lg^b n$.
+
+\sectiontitle{06. LOGARITHMS}
+
+$\log(xy) = \log x + \log y$
+
+$\log(x^k) = k \log x$
+
+$\log_b a = \frac{\log_c a}{\log_c b}$
+
+\sectiontitle{07. MASTER THEOREM}
+For recurrence $T(n) = aT(n/b) + f(n)$.
+Compare $n^{\log_b a}$ vs $f(n)$.
+
+\textit{Case 1 (Warrior):}
+Root heavy. $T(n) = \Theta(n^{\log_b a})$
+
+\textit{Case 2 (Balanced):}
+Equal weight. $T(n) = \Theta(n^{\log_b a} \lg n)$
+
+\textit{Case 3 (Root):}
+Leaf heavy. $T(n) = \Theta(f(n))$
+
+\sectiontitle{08. LOOPS}
+
+\textbf{Simple Loop:} $N$ iterations $\times$ Work inside.
+
+\textbf{Nested Independent:} $N \times M$.
+
+\textbf{Nested Dependent:} $\sum i \approx n^2/2$.
+
+\sectiontitle{09. MATH}
+
+\textbf{Arithmetic Series:}
+$\sum i = \frac{n(n+1)}{2} = \Theta(n^2)$
+
+\textbf{Geometric Series:}
+$\sum r^i = \frac{r^{n+1}-1}{r-1}$
+
+\textbf{Stirling's:}
+$n! \approx (n/e)^n$
+
+\end{multicols}
+\end{document}

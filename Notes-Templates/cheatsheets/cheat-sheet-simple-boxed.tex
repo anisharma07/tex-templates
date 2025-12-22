@@ -1,0 +1,95 @@
+\documentclass[a4paper,8pt]{article}
+\usepackage[landscape, margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Boxed Header
+\titleformat{\section}
+{\normalfont}{}{0em}
+{\begin{tcolorbox}[colback=black!70,colframe=black!70,coltext=white,boxrule=0pt,arc=3pt,left=2pt,right=2pt,top=1pt,bottom=1pt,fontupper=\bfseries\small\MakeUppercase]##1\end{tcolorbox}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{COMPLEXITY CHEAT SHEET (BOXED)}}
+\end{center}
+
+\begin{multicols}{3}
+
+\section{Definitions}
+\textbf{$\Theta(g(n))$ - Tight Bound}
+$0 \le c_1 g(n) \le f(n) \le c_2 g(n)$
+for $n \ge n_0$.
+
+\textbf{$O(g(n))$ - Upper Bound}
+$0 \le f(n) \le c g(n)$
+for $n \ge n_0$.
+
+\textbf{$\Omega(g(n))$ - Lower Bound}
+$0 \le c g(n) \le f(n)$
+for $n \ge n_0$.
+
+\textbf{$o(g(n))$ - Strict Upper}
+$\lim_{n \to \infty} \frac{f(n)}{g(n)} = 0$
+
+\textbf{$\omega(g(n))$ - Strict Lower}
+$\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty$
+
+\section{Standard Functions}
+\textbf{Polynomials}: $\sum a_i n^i = \Theta(n^d)$
+
+\textbf{Logarithms}: $\log_b n = \Theta(\ln n)$
+
+\textbf{Factorials}: $n! = o(n^n)$, $\log(n!) = \Theta(n \lg n)$
+
+\section{Limits \& Comparisons}
+$$ \lim_{n \to \infty} \frac{n^b}{a^n} = 0 \quad (\forall a > 1) $$
+Exp functions $>$ Poly functions.
+
+$$ \lim_{n \to \infty} \frac{\lg^b n}{n^a} = 0 \quad (\forall a > 0) $$
+Poly functions $>$ Log functions.
+
+\section{Properties}
+\textbf{Transitivity}:
+$f=\Theta(g), g=\Theta(h) \implies f=\Theta(h)$
+(Applies to all).
+
+\textbf{Transpose Symmetry}:
+$f=O(g) \iff g=\Omega(f)$
+$f=o(g) \iff g=\omega(f)$
+
+\textbf{Equation Arithmetic}:
+$2n^2 + 3n + 1 = 2n^2 + \Theta(n) = \Theta(n^2)$
+
+\section{Stirling's Approx}
+$$ n! \approx \sqrt{2\pi n} \left(\frac{n}{e}\right)^n $$
+Useful for analyzing factorial complexities.
+
+\section{Recurrences (Master Thm)}
+$T(n) = aT(n/b) + f(n)$
+Depending on $c = \log_b a$:
+1. $f(n) = O(n^{c-\epsilon}) \implies T(n) = \Theta(n^c)$
+2. $f(n) = \Theta(n^c) \implies T(n) = \Theta(n^c \lg n)$
+3. $f(n) = \Omega(n^{c+\epsilon}) \implies T(n) = \Theta(f(n))$
+
+\section{Analytic Tricks}
+\begin{itemize}
+    \item Ignore constants.
+    \item Ignore lower order terms.
+    \item $n!$ grows VERY fast.
+    \item $\lg^* n$ (Iterated log) grows VERY slow.
+\end{itemize}
+
+\end{multicols}
+\end{document}

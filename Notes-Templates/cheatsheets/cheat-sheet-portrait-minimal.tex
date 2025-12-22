@@ -1,0 +1,174 @@
+\documentclass[9pt,a4paper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{mathpazo} % Palatino
+\usepackage{titlesec}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\columnseprule}{0.4pt}
+
+% Minimalist Headers
+\titleformat{\section}
+  {\large\bfseries\scshape}{}{0em}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\newcommand{\sectiontitle}[1]{\section*{#1}\hrule}
+\newcommand{\subsectiontitle}[1]{\textbf{#1:}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Asymptotic Notation Cheat Sheet}} \\
+    \vspace{4pt}
+    \textit{Growth of Functions - Quick Reference (Portrait Minimal)}
+\end{center}
+
+\vspace{5pt}
+
+\begin{multicols}{2}
+
+\sectiontitle{The 5 Notations}
+
+\begin{center}
+\begin{tabular}{clc}
+\toprule
+\textbf{Not.} & \textbf{Meaning} & \textbf{Condition} \\
+\midrule
+$\Theta$ & Tight bound & $c_1 g \le f \le c_2 g$ \\
+$O$ & Upper bound & $f \le c g$ \\
+$\Omega$ & Lower bound & $c g \le f$ \\
+$o$ & Strict upper & $f < c g$ \\
+$\omega$ & Strict lower & $c g < f$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{5pt}
+\subsectiontitle{$\Theta(g(n))$} $\exists c_1, c_2, n_0 > 0:$ $0 \leq c_1 g(n) \leq f(n) \leq c_2 g(n)$ $\forall n \geq n_0$
+
+\vspace{3pt}
+\subsectiontitle{$O(g(n))$} $\exists c, n_0 > 0:$ $0 \leq f(n) \leq c \cdot g(n)$ $\forall n \geq n_0$
+
+\vspace{3pt}
+\subsectiontitle{$\Omega(g(n))$} $\exists c, n_0 > 0:$ $0 \leq c \cdot g(n) \leq f(n)$ $\forall n \geq n_0$
+
+\vspace{3pt}
+\subsectiontitle{$o(g(n))$} $\lim_{n \to \infty} \frac{f(n)}{g(n)} = 0$
+
+\vspace{3pt}
+\subsectiontitle{$\omega(g(n))$} $\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty$
+
+\sectiontitle{Key Theorems}
+
+\textbf{Th 3.1:} $f(n) = \Theta(g(n)) \iff f(n) = O(g(n))$ AND $f(n) = \Omega(g(n))$
+
+\textbf{Polynomials:} $p(n) = \sum_{i=0}^d a_i n^i \implies \Theta(n^d)$
+
+\textbf{Transpose Terminology:} 
+$f(n) = O(g(n)) \iff g(n) = \Omega(f(n))$
+
+\sectiontitle{Growth Hierarchy}
+
+$$O(1) < O(\lg n) < O(\sqrt{n}) < O(n)$$
+$$< O(n \lg n) < O(n^2) < O(n^3)$$
+$$< O(2^n) < O(n!)$$
+
+\sectiontitle{Common Complexities}
+
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Class} & \textbf{Algorithm} \\
+\midrule
+$O(1)$ & Stack op, Hash map \\
+$O(\lg n)$ & Binary search \\
+$O(n)$ & Linear scan \\
+$O(n \lg n)$ & Optimal sort \\
+$O(n^2)$ & Nested loops \\
+$O(2^n)$ & Subsets \\
+$O(n!)$ & Permutations \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\sectiontitle{Properties}
+
+\textbf{Transitivity:} $f = \Theta(g), g = \Theta(h) \implies f = \Theta(h)$
+
+\textbf{Reflexivity:} $f(n) = \Theta(f(n))$
+
+\textbf{Symmetry:} $f(n) = \Theta(g(n)) \iff g(n) = \Theta(f(n))$
+
+\columnbreak
+
+\sectiontitle{Critical Limits}
+
+\textbf{Exp vs Poly:} $\lim_{n \to \infty} \frac{n^b}{a^n} = 0 \quad (a > 1)$
+$\implies n^b = o(a^n)$
+
+\textbf{Poly vs Log:} $\lim_{n \to \infty} \frac{\lg^b n}{n^a} = 0 \quad (a > 0)$
+$\implies \lg^b n = o(n^a)$
+
+\textbf{Factorial vs Exp:} $n! = \omega(2^n)$
+
+\sectiontitle{Logarithms \& Exponentials}
+
+$\lg n = \log_2 n$, $\ln n = \log_e n$
+
+\textbf{Log Identities:}
+\begin{align*}
+a &= b^{\log_b a} & \log(ab) &= \log a + \log b \\
+\log(a^k) &= k \log a & \log_b a &= \frac{\log a}{\log b}
+\end{align*}
+
+\textbf{Exp Identities:}
+$(a^m)^n = a^{mn}$, \quad $e^x \approx 1+x$
+
+\sectiontitle{Factorials \& Stirling}
+
+$n! = 1 \cdot 2 \cdot 3 \cdots n$
+
+\textbf{Stirling's Approximation (Weak):}
+$n! \approx (n/e)^n$
+
+\textbf{Log Factorial:} $\lg(n!) = \Theta(n \lg n)$
+
+\sectiontitle{Master Theorem}
+
+For $T(n) = aT(n/b) + f(n)$: Let $c_{crit} = \log_b a$.
+
+\textbf{1.} $f(n) = O(n^c)$ ($c < c_{crit}$) $\implies \Theta(n^{c_{crit}})$
+
+\textbf{2.} $f(n) = \Theta(n^{c_{crit}})$ $\implies \Theta(n^{c_{crit}} \lg n)$
+
+\textbf{3.} $f(n) = \Omega(n^c)$ ($c > c_{crit}$) $\implies \Theta(f(n))$
+
+\sectiontitle{Loop Analysis}
+
+\textbf{Single loop:} $O(n)$
+
+\textbf{Nested (independent):} $O(nm)$
+
+\textbf{Nested (dependent):} $\sum_{i=1}^n i = \Theta(n^2)$
+
+\textbf{Halving loop:} $O(\lg n)$
+
+\sectiontitle{Summation Formulas}
+
+$\sum_{i=1}^n 1 = n$
+
+$\sum_{i=1}^n i = \Theta(n^2)$
+
+$\sum_{i=1}^n i^2 = \Theta(n^3)$
+
+$\sum_{i=0}^n a^i = \frac{a^{n+1}-1}{a-1}$
+
+\end{multicols}
+\end{document}
