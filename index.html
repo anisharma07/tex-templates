@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX Templates Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .github-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-description {
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .template-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .template-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .template-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .template-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .template-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-code {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-code:hover {
+            background: #5568d3;
+        }
+
+        .btn-preview {
+            background: #48bb78;
+            color: white;
+        }
+
+        .btn-preview:hover {
+            background: #38a169;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .badge-new {
+            background: #ffd700;
+            color: #333;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .template-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 LaTeX Templates Collection</h1>
+            <p>Professional templates for notes, presentations, and competitive programming</p>
+            <a href="https://github.com/anisharma07/tex-templates" class="github-link" target="_blank">
+                View on GitHub →
+            </a>
+        </header>
+
+        <div class="content">
+            <!-- Main Templates -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="emoji">📝</span>
+                    Main Note Templates
+                </h2>
+                <p class="section-description">Complete, ready-to-use note-taking templates</p>
+                <div class="template-grid">
+                    <div class="template-card">
+                        <div class="template-name">Textbook Style</div>
+                        <div class="template-desc">Traditional academic textbook format with theorem environments and
+                            formal structure</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/notes-1-textbook-style.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/notes-1-textbook-style.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Advanced Competitive</div>
+                        <div class="template-desc">Optimized for competitive programming with constraint boxes, tricks,
+                            and code snippets</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/notes-5-advanced-competitive.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/notes-5-advanced-competitive.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Starter Templates -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="emoji">🚀</span>
+                    Starter Templates
+                </h2>
+                <p class="section-description">Blank templates to build from scratch</p>
+                <div class="template-grid">
+                    <div class="template-card">
+                        <div class="template-name">Textbook Template<span class="badge badge-new">NEW</span></div>
+                        <div class="template-desc">Clean slate with theorem environments and academic formatting</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-textbook-style.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-textbook-style.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Competitive Template<span class="badge badge-new">NEW</span></div>
+                        <div class="template-desc">Pre-configured with colored boxes and code listing setup</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-advanced-competitive.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-advanced-competitive.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Bold Header</div>
+                        <div class="template-desc">Minimalist template with bold section headers</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-bold-header.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-bold-header.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Madrid Academic</div>
+                        <div class="template-desc">Classic academic presentation style</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-madrid-academic.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-madrid-academic.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Minimal Academic</div>
+                        <div class="template-desc">Clean, distraction-free academic template</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-minimal-academic.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/top/template-minimal-academic.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Competitive Programming Variations -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="emoji">🎨</span>
+                    Competitive Programming Variations
+                    <span class="badge badge-new">NEW</span>
+                </h2>
+                <p class="section-description">10 unique styles for competitive programming notes</p>
+                <div class="template-grid">
+                    <div class="template-card">
+                        <div class="template-name">Dark Neon</div>
+                        <div class="template-desc">Dark mode with vibrant neon accents - perfect for screen reading
+                        </div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-1-dark-neon.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-1-dark-neon.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Minimalist B&W</div>
+                        <div class="template-desc">Clean black and white with sharp corners - printer friendly</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-2-minimalist.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-2-minimalist.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Classic Serif</div>
+                        <div class="template-desc">Academic style with Palatino font and navy/dark red colors</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-3-classic-serif.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-3-classic-serif.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Modern Sans</div>
+                        <div class="template-desc">Flat design with Material Design colors and Helvetica font</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-4-modern-sans.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-4-modern-sans.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Retro Terminal</div>
+                        <div class="template-desc">Hacker aesthetic with monospace fonts and green terminal style</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-5-retro-terminal.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-5-retro-terminal.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Soft Pastel</div>
+                        <div class="template-desc">Rounded corners with Charter font and gentle pastel colors</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-6-soft-pastel.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-6-soft-pastel.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">High Contrast</div>
+                        <div class="template-desc">Thick borders and primary colors - maximum readability</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-7-high-contrast.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-7-high-contrast.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Elegant Book</div>
+                        <div class="template-desc">Linux Libertine font with gold/purple theme and wide margins</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-8-elegant-book.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-8-elegant-book.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Two Column</div>
+                        <div class="template-desc">Landscape 2-column layout - perfect for cheat sheets</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-9-two-column.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-9-two-column.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Forest Theme</div>
+                        <div class="template-desc">Earth tones with Bookman font - green/brown/beige palette</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-10-forest.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/competitive-variations/comp-10-forest.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Basic Themes -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="emoji">🎭</span>
+                    Basic Color Themes
+                </h2>
+                <p class="section-description">Simple color variations for quick customization</p>
+                <div class="template-grid">
+                    <div class="template-card">
+                        <div class="template-name">Burnt Orange</div>
+                        <div class="template-desc">Warm orange color scheme</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-burnt-orange.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Clean Slate</div>
+                        <div class="template-desc">Minimal neutral colors</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-clean-slate.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Corporate Tech</div>
+                        <div class="template-desc">Professional blue scheme</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-corporate-tech.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Dark Mode</div>
+                        <div class="template-desc">Dark background theme</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-dark-mode.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Deep Ocean</div>
+                        <div class="template-desc">Blue-green aquatic theme</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-deep-ocean.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Forest Research</div>
+                        <div class="template-desc">Green nature-inspired theme</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-forest-research.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Ivy League</div>
+                        <div class="template-desc">Classic academic style</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-ivy-league.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Minimalist Mono</div>
+                        <div class="template-desc">Black and white simplicity</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-minimalist-mono.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Royal Purple</div>
+                        <div class="template-desc">Elegant purple tones</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-royal-purple.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Solarized Light</div>
+                        <div class="template-desc">Popular Solarized palette</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/basic/theme-solarized-light.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Font Variations -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="emoji">✍️</span>
+                    Font Variations
+                </h2>
+                <p class="section-description">Different font families for varied typographic styles</p>
+                <div class="template-grid">
+                    <div class="template-card">
+                        <div class="template-name">Avant Garde</div>
+                        <div class="template-desc">Modern geometric sans-serif</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-avant-garde.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-avant-garde.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Bera Serif</div>
+                        <div class="template-desc">Bitstream Vera based serif</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-bera-serif.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-bera-serif.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Bookman</div>
+                        <div class="template-desc">Classic readable serif</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-bookman.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-bookman.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Charter</div>
+                        <div class="template-desc">Bitstream Charter typeface</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-charter.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-charter.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Courier</div>
+                        <div class="template-desc">Monospace typewriter style</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-courier.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-courier.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Helvetica</div>
+                        <div class="template-desc">Clean Swiss sans-serif</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-helvetica.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-helvetica.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Latin Modern</div>
+                        <div class="template-desc">Enhanced Computer Modern</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-latin-modern.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-latin-modern.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Palatino</div>
+                        <div class="template-desc">Elegant Renaissance serif</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-palatino.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-palatino.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Times</div>
+                        <div class="template-desc">Classic newspaper serif</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-times.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-times.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Utopia</div>
+                        <div class="template-desc">Adobe's versatile serif</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-utopia.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/fonts/font-utopia.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typography Variations -->
+            <section class="section">
+                <h2 class="section-title">
+                    <span class="emoji">📖</span>
+                    Typography Styles
+                </h2>
+                <p class="section-description">Different typographic approaches for presentations</p>
+                <div class="template-grid">
+                    <div class="template-card">
+                        <div class="template-name">Classic Serif</div>
+                        <div class="template-desc">Traditional serif typography</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/typography/typo-classic-serif.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/typography/typo-classic-serif.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Elegant Light</div>
+                        <div class="template-desc">Light weight refined typography</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/typography/typo-elegant-light.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/typography/typo-elegant-light.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Large Bold</div>
+                        <div class="template-desc">Big, impactful typography</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/typography/typo-large-bold.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/typography/typo-large-bold.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                    <div class="template-card">
+                        <div class="template-name">Modern Sans</div>
+                        <div class="template-desc">Contemporary sans-serif design</div>
+                        <div class="template-links">
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/typography/typo-modern-sans.tex"
+                                class="btn btn-code" target="_blank">View Code</a>
+                            <a href="https://github.com/anisharma07/tex-templates/blob/main/themes/typography/typo-modern-sans.pdf"
+                                class="btn btn-preview" target="_blank">Preview PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p><strong>LaTeX Templates Collection</strong></p>
+            <p>Created with ❤️ for the LaTeX community</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                <a href="https://github.com/anisharma07/tex-templates" style="color: #667eea; text-decoration: none;">
+                    Star on GitHub ⭐
+                </a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
