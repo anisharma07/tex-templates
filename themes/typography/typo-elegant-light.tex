@@ -1,0 +1,121 @@
+\documentclass[aspectratio=169, 10pt]{beamer}
+\usetheme{default}
+\usecolortheme{default}
+
+% Typography: Elegant Light
+% Note: Standard LaTeX fonts don't always have a "light" weight easily accessible without XeLaTeX/LuaLaTeX
+% We will simulate a lighter feel with color and font choice (Computer Modern Sans Serif is naturally quite light)
+\usefonttheme{professionalfonts}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % Latin Modern
+
+% Packages
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Color scheme: Soft Grey & Teal
+\definecolor{softteal}{RGB}{0, 128, 128}
+\definecolor{lightgrey}{RGB}{80, 80, 80}
+
+\setbeamercolor{frametitle}{fg=softteal,bg=white}
+\setbeamerfont{frametitle}{series=\mdseries, size=\Large} % Medium series (not bold)
+\setbeamercolor{title}{fg=softteal}
+\setbeamerfont{title}{series=\mdseries, size=\huge}
+\setbeamercolor{structure}{fg=softteal}
+\setbeamercolor{normal text}{fg=lightgrey,bg=white}
+
+% Unbold everything possible
+\setbeamerfont{block title}{series=\mdseries}
+\setbeamerfont{caption name}{series=\mdseries}
+\setbeamerfont{description item}{series=\mdseries}
+
+\setbeamercolor{block title}{bg=white, fg=softteal}
+\setbeamercolor{block body}{bg=white} % Minimalist blocks (no background)
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% Title Information
+\title{Elegant Light Theme}
+\subtitle{Refined & Minimalist Typography}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Section Name}
+
+\begin{frame}{Standard Slide}
+\begin{itemize}
+\item First point
+\item Second point
+\item Third point
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Slide with Block}
+\begin{block}{Block Title}
+This is a standard block useful for definitions or theorems.
+\end{block}
+
+\begin{alertblock}{Alert Block}
+This is an alert block useful for warnings or important notes.
+\end{alertblock}
+
+\begin{exampleblock}{Example Block}
+This is an example block useful for examples.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Two Column Layout}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Left Column}
+\begin{itemize}
+\item Item 1
+\item Item 2
+\end{itemize}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\textbf{Right Column}
+\begin{center}
+% \includegraphics[width=0.8\textwidth]{image-file}
+[Image Placeholder]
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Mathematics}
+
+\begin{frame}{Mathematical Content}
+Equation example:
+$$ E = mc^2 $$
+
+Align environment example:
+\begin{align*}
+f(x) &= x^2 + 2x + 1 \\
+&= (x+1)^2
+\end{align*}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item Summary point 1
+\item Summary point 2
+\end{itemize}
+\end{frame}
+
+\end{document}

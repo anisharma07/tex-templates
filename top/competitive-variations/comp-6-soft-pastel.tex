@@ -1,0 +1,56 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{charter} % Charter font
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[colorlinks=true, allcolors=purple]{hyperref}
+
+% Pastel Colors
+\definecolor{pastelblue}{RGB}{174,198,207}
+\definecolor{pastelred}{RGB}{255,179,186}
+\definecolor{pastelgreen}{RGB}{119,221,119}
+\definecolor{pastelyellow}{RGB}{253,253,150}
+\definecolor{pastelpurple}{RGB}{177,156,217}
+
+\lstset{
+    backgroundcolor=\color{white},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{pastelpurple!80!black},
+    commentstyle=\color{pastelgreen!80!black},
+    frame=trbl,
+    rulecolor=\color{pastelblue},
+    numbers=left,
+    captionpos=b
+}
+
+\newtcolorbox{optimizebox}{colback=pastelblue!20,colframe=pastelblue,arc=5mm,title=\textbf{Optimization}}
+\newtcolorbox{pitfallbox}{colback=pastelred!20,colframe=pastelred,arc=5mm,title=\textbf{Pitfall}}
+\newtcolorbox{constraintbox}{colback=pastelgreen!20,colframe=pastelgreen,arc=5mm,title=\textbf{Constraints}}
+\newtcolorbox{trickbox}{colback=pastelyellow!20,colframe=pastelyellow!80!black,arc=5mm,title=\textbf{Trick}}
+
+\title{\bfseries Soft & Clean Notes}
+\author{Pastel Edition}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Overview}
+Soft colors and rounded corners.
+
+\begin{constraintbox}
+$N \le 10^5$
+\end{constraintbox}
+
+\section{Code}
+\begin{lstlisting}[language=C++]
+// Pastel style
+void solve() {}
+\end{lstlisting}
+
+\end{document}

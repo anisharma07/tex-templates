@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+
+% Custom title page formatting
+\makeatletter
+\renewcommand\tableofcontents{%
+    \begin{center}
+    {\Large\bfseries\contentsname}\par
+    \vspace{1em}
+    \end{center}
+    \@starttoc{toc}
+}
+\makeatother
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{property}[theorem]{Property}
+
+\title{
+    \vspace{2cm}
+    {\Huge\bfseries Main Title}
+    \vspace{1cm}
+    
+    {\huge Subtitle or Subject}
+    \vspace{1cm}
+    
+    {\Large Descriptive Note}
+    \vspace{2cm}
+}
+\author{\Large Author Name}
+\date{\today}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vfill
+    {\Huge\bfseries Main Title}\par
+    \vspace{1.5cm}
+    {\huge Subtitle or Subject}\par
+    \vspace{1cm}
+    {\Large Descriptive Note}\par
+    \vfill
+    {\Large Author Name}\par
+    \vspace{0.5cm}
+    {\large \today}\par
+    \vfill
+\end{titlepage}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Section Title}
+
+Start writing your notes here.
+
+\subsection{Subsection Title}
+
+Text goes here.
+
+\begin{definition}[Term]
+Definition of the term.
+\end{definition}
+
+\begin{theorem}[Theorem Name]
+Statement of the theorem.
+\end{theorem}
+
+\begin{proof}
+Proof of the theorem.
+\end{proof}
+
+\end{document}

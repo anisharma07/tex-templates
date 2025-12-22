@@ -1,0 +1,112 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{default}
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+
+% Packages
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Theme 8: Solarized Light
+\definecolor{solarizedbase3}{RGB}{253, 246, 227}
+\definecolor{solarizedbase00}{RGB}{101, 123, 131}
+\definecolor{solarizedblue}{RGB}{38, 139, 210}
+\definecolor{solarizedorange}{RGB}{203, 75, 22}
+
+\setbeamercolor{background canvas}{bg=solarizedbase3}
+\setbeamercolor{frametitle}{fg=solarizedblue,bg=solarizedbase3}
+\setbeamercolor{title}{fg=solarizedblue}
+\setbeamercolor{structure}{fg=solarizedblue}
+\setbeamercolor{normal text}{fg=solarizedbase00}
+\setbeamercolor{block title}{bg=solarizedblue!20, fg=solarizedblue}
+\setbeamercolor{block body}{bg=solarizedbase3}
+\setbeamercolor{alertblock title}{bg=solarizedorange!20, fg=solarizedorange}
+\setbeamercolor{alertblock body}{bg=solarizedbase3}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[circle]
+
+% Title Information
+\title{Solarized Light Theme}
+\subtitle{Academic Presentation}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Section Name}
+
+\begin{frame}{Standard Slide}
+\begin{itemize}
+\item First point
+\item Second point
+\item Third point
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Slide with Block}
+\begin{block}{Block Title}
+This is a standard block useful for definitions or theorems.
+\end{block}
+
+\begin{alertblock}{Alert Block}
+This is an alert block useful for warnings or important notes.
+\end{alertblock}
+
+\begin{exampleblock}{Example Block}
+This is an example block useful for examples.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Two Column Layout}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Left Column}
+\begin{itemize}
+\item Item 1
+\item Item 2
+\end{itemize}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\textbf{Right Column}
+\begin{center}
+% \includegraphics[width=0.8\textwidth]{image-file}
+[Image Placeholder]
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Mathematics}
+
+\begin{frame}{Mathematical Content}
+Equation example:
+$$ E = mc^2 $$
+
+Align environment example:
+\begin{align*}
+f(x) &= x^2 + 2x + 1 \\
+&= (x+1)^2
+\end{align*}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item Summary point 1
+\item Summary point 2
+\end{itemize}
+\end{frame}
+
+\end{document}

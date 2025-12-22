@@ -1,0 +1,58 @@
+\documentclass[9pt,a4paper,twocolumn,landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{titlesec}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+
+\titlespacing*{\section}{0pt}{0.2em}{0.1em}
+\titlespacing*{\subsection}{0pt}{0.1em}{0.1em}
+
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    breaklines=true,
+    frame=single,
+    aboveskip=2pt,
+    belowskip=2pt
+}
+
+\newtcolorbox{optimizebox}{colback=white,colframe=blue,left=1pt,right=1pt,top=1pt,bottom=1pt,boxrule=0.5pt,title=\textbf{OPT}}
+\newtcolorbox{pitfallbox}{colback=white,colframe=red,left=1pt,right=1pt,top=1pt,bottom=1pt,boxrule=0.5pt,title=\textbf{ERR}}
+\newtcolorbox{constraintbox}{colback=white,colframe=green,left=1pt,right=1pt,top=1pt,bottom=1pt,boxrule=0.5pt,title=\textbf{LIM}}
+\newtcolorbox{trickbox}{colback=white,colframe=orange,left=1pt,right=1pt,top=1pt,bottom=1pt,boxrule=0.5pt,title=\textbf{TIP}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.2em}
+
+\begin{document}
+
+\section{Graph Algorithms}
+\subsection{DFS/BFS}
+Standard traversals.
+
+\begin{lstlisting}[language=C++]
+void dfs(int u) {
+    vis[u] = 1;
+    for(int v : adj[u]) if(!vis[v]) dfs(v);
+}
+\end{lstlisting}
+
+\begin{optimizebox}
+Use iterative for deep recursion.
+\end{optimizebox}
+
+\section{Data Structures}
+\subsection{Segment Tree}
+Range queries.
+
+\begin{constraintbox}
+$N \le 10^5 \implies O(N \log N)$
+\end{constraintbox}
+
+\end{document}

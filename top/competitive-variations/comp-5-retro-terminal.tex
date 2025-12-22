@@ -1,0 +1,52 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{courier}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[colorlinks=true, allcolors=green!50!black]{hyperref}
+
+\definecolor{termgreen}{RGB}{0,128,0}
+\definecolor{termbg}{RGB}{240,255,240}
+
+\lstset{
+    backgroundcolor=\color{black},
+    basicstyle=\ttfamily\small\color{white},
+    keywordstyle=\color{green},
+    commentstyle=\color{gray},
+    stringstyle=\color{yellow},
+    frame=single,
+    rulecolor=\color{termgreen},
+    numbers=left,
+    numberstyle=\tiny\color{termgreen}
+}
+
+\newtcolorbox{optimizebox}{colback=white,colframe=termgreen,fonttitle=\ttfamily\bfseries,title=> OPTIMIZATION}
+\newtcolorbox{pitfallbox}{colback=white,colframe=red,fonttitle=\ttfamily\bfseries,title=> ERROR}
+\newtcolorbox{constraintbox}{colback=white,colframe=blue,fonttitle=\ttfamily\bfseries,title=> INPUT\_LIMITS}
+\newtcolorbox{trickbox}{colback=white,colframe=orange,fonttitle=\ttfamily\bfseries,title=> HACK}
+
+\title{\ttfamily\bfseries > COMPETITIVE\_PROGRAMMING\_NOTES}
+\author{\ttfamily user@host}
+\date{\ttfamily \today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{\ttfamily 1.0 SYSTEM\_OVERVIEW}
+Terminal style notes.
+
+\begin{constraintbox}
+MAX_N = 100000
+\end{constraintbox}
+
+\section{\ttfamily 2.0 SOURCE\_CODE}
+\begin{lstlisting}[language=C++]
+#include <iostream>
+// Retro terminal style
+\end{lstlisting}
+
+\end{document}

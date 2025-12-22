@@ -1,0 +1,64 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+
+% Minimalist Settings
+\definecolor{lightgray}{RGB}{240,240,240}
+
+\lstset{
+    backgroundcolor=\color{white},
+    basicstyle=\ttfamily\small,
+    frame=single,
+    rulecolor=\color{black},
+    commentstyle=\itshape,
+    keywordstyle=\bfseries,
+    numbers=left,
+    numberstyle=\tiny,
+    captionpos=b
+}
+
+% Sharp, B&W Boxes
+\newtcolorbox{optimizebox}{colback=white,colframe=black,sharp corners,title=\textbf{OPTIMIZATION}, coltitle=white, fonttitle=\bfseries}
+\newtcolorbox{pitfallbox}{colback=white,colframe=black,sharp corners,title=\textbf{PITFALL}, coltitle=white, fonttitle=\bfseries}
+\newtcolorbox{constraintbox}{colback=white,colframe=black,sharp corners,title=\textbf{CONSTRAINTS}, coltitle=white, fonttitle=\bfseries}
+\newtcolorbox{trickbox}{colback=white,colframe=black,sharp corners,title=\textbf{TRICK}, coltitle=white, fonttitle=\bfseries}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\title{\textbf{ALGORITHM NOTES}}
+\author{Minimalist Edition}
+\date{\today}
+
+\begin{document}
+\maketitle
+\hrule
+\tableofcontents
+\vspace{1em}
+\hrule
+\newpage
+
+\section{OVERVIEW}
+Clean and simple notes.
+
+\begin{constraintbox}
+$N \le 10^5$
+\end{constraintbox}
+
+\section{CODE}
+\begin{lstlisting}[language=C++]
+// Minimalist code
+int main() { return 0; }
+\end{lstlisting}
+
+\begin{optimizebox}
+Keep it simple.
+\end{optimizebox}
+
+\end{document}

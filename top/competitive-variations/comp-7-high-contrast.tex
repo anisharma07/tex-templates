@@ -1,0 +1,47 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{mathptmx} % Times
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\lstset{
+    backgroundcolor=\color{yellow!10},
+    basicstyle=\ttfamily\bfseries\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{red},
+    frame=single,
+    rulecolor=\color{black},
+    framerule=2pt
+}
+
+\newtcolorbox{optimizebox}{colback=white,colframe=blue,boxrule=2pt,title=\textbf{OPTIMIZATION}}
+\newtcolorbox{pitfallbox}{colback=white,colframe=red,boxrule=2pt,title=\textbf{PITFALL}}
+\newtcolorbox{constraintbox}{colback=white,colframe=green!50!black,boxrule=2pt,title=\textbf{CONSTRAINTS}}
+\newtcolorbox{trickbox}{colback=white,colframe=orange,boxrule=2pt,title=\textbf{TRICK}}
+
+\title{\bfseries\Huge HIGH CONTRAST NOTES}
+\author{\bfseries BOLD EDITION}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{OVERVIEW}
+Strong lines and primary colors.
+
+\begin{constraintbox}
+$N \le 10^5$
+\end{constraintbox}
+
+\section{CODE}
+\begin{lstlisting}[language=C++]
+// High contrast
+int main() {}
+\end{lstlisting}
+
+\end{document}

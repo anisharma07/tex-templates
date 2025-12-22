@@ -1,0 +1,86 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{pagecolor}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Dark Mode Colors
+\definecolor{bg}{RGB}{30,30,30}
+\definecolor{fg}{RGB}{220,220,220}
+\definecolor{neonblue}{RGB}{0,255,255}
+\definecolor{neongreen}{RGB}{0,255,0}
+\definecolor{neonpink}{RGB}{255,0,255}
+\definecolor{neonyellow}{RGB}{255,255,0}
+\definecolor{codebg}{RGB}{40,40,40}
+
+\pagecolor{bg}
+\color{fg}
+
+% Hyperref last
+\usepackage[colorlinks=true, linkcolor=neonblue, urlcolor=neonpink, citecolor=neongreen]{hyperref}
+
+% Code listing
+\lstset{
+    backgroundcolor=\color{codebg},
+    commentstyle=\color{neongreen},
+    keywordstyle=\color{neonpink},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{neonyellow},
+    basicstyle=\ttfamily\small\color{fg},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    rulecolor=\color{gray}
+}
+
+% Custom boxes
+\newtcolorbox{optimizebox}{colback=codebg,colframe=neonblue,title=\textbf{⚡ Optimization}, coltitle=bg, coltext=fg}
+\newtcolorbox{pitfallbox}{colback=codebg,colframe=neonpink,title=\textbf{⚠ Common Pitfall}, coltitle=bg, coltext=fg}
+\newtcolorbox{constraintbox}{colback=codebg,colframe=neongreen,title=\textbf{📊 Constraint Analysis}, coltitle=bg, coltext=fg}
+\newtcolorbox{trickbox}{colback=codebg,colframe=neonyellow,title=\textbf{🎯 Competitive Trick}, coltitle=bg, coltext=fg}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\title{\color{neonblue}\Huge\bfseries Competitive Programming Notes}
+\author{\color{fg}Dark Mode Edition}
+\date{\color{fg}\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{\color{neonblue}Topic Overview}
+Introduction to the algorithm.
+
+\begin{constraintbox}
+\textbf{Constraints:} $N \le 10^5$, Time: 1s.
+\end{constraintbox}
+
+\section{\color{neonblue}Implementation}
+\begin{lstlisting}[language=C++]
+#include <bits/stdc++.h>
+using namespace std;
+// Dark mode code
+\end{lstlisting}
+
+\begin{optimizebox}
+Use fast I/O.
+\end{optimizebox}
+
+\end{document}

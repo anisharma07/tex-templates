@@ -1,0 +1,276 @@
+# ========================================
+# LaTeX THEMES Project - Comprehensive .gitignore
+# ========================================
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# LaTeX intermediate files
+*.dvi
+*.xdv
+*-converted-to.*
+
+# LaTeX bibliography files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# LaTeX build tool files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# LaTeX beamer files
+*.nav
+*.pre
+*.snm
+*.vrb
+
+# LaTeX glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+
+# LaTeX hyperref
+*.brf
+
+# LaTeX knitr
+*-concordance.tex
+
+# LaTeX listings
+*.lol
+
+# LaTeX makeidx
+*.idx
+*.ilg
+*.ind
+
+# LaTeX minitoc
+*.maf
+*.mlf
+*.mlt
+*.mtc[0-9]*
+*.slf[0-9]*
+*.slt[0-9]*
+*.stc[0-9]*
+
+# LaTeX minted
+_minted*
+*.pyg
+
+# LaTeX nomencl
+*.nlg
+*.nlo
+*.nls
+
+# LaTeX pax
+*.pax
+
+# LaTeX pdfpages
+*.pdf_tex
+
+# LaTeX sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# LaTeX scrwfile
+*.wrt
+
+# LaTeX sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
+
+# LaTeX TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
+
+# LaTeX todonotes
+*.tdo
+
+# LaTeX xindy
+*.xdy
+
+# LaTeX xmpincl
+*.xmpi
+
+# LaTeX enumitem
+*.ent
+
+# LaTeX beamer-specific
+*.thm
+
+# ========================================
+# PDF outputs
+# ========================================
+# Uncomment the line below if you don't want to track PDFs
+# *.pdf
+
+# ========================================
+# Temporary and backup files
+# ========================================
+*.bak
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+*.backup
+*.old
+*.orig
+*.rej
+
+# ========================================
+# Editor and IDE files
+# ========================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# TeXstudio
+*.txss
+
+# Texmaker
+*.tps
+
+# Kile
+*.kilepr
+
+# LaTeXila
+*.latexmain
+
+# TeXworks
+*.aux.bak
+*.synctex.gz
+
+# TexPad
+.texpadtmp/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+.netrwhist
+tags
+
+# ========================================
+# OS-specific files
+# ========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.stackdump
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ========================================
+# Build directories
+# ========================================
+build/
+dist/
+output/
+out/
+_build/
+_output/
+
+# ========================================
+# Compressed files (unless explicitly needed)
+# ========================================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+
+# ========================================
+# Package manager files
+# ========================================
+# tlmgr
+texlive.profile
+
+# ========================================
+# Custom exclusions for this project
+# ========================================
+# Add any project-specific files/directories to ignore below
+
+# Don't ignore .gitignore itself
+!.gitignore
+
+# Keep directory structure (if using placeholder files)
+!.gitkeep

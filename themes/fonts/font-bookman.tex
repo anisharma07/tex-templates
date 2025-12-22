@@ -1,0 +1,105 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{default}
+\usecolortheme{default}
+\usefonttheme{serif}
+
+% Font: Bookman
+\usepackage{bookman}
+\usepackage[T1]{fontenc}
+
+% Packages
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Color scheme: white background with blue/black accents
+\definecolor{darkblue}{RGB}{0,51,102}
+\setbeamercolor{frametitle}{fg=white,bg=darkblue}
+\setbeamercolor{title}{fg=darkblue}
+\setbeamercolor{structure}{fg=darkblue}
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% Title Information
+\title{Bookman Font}
+\subtitle{Legible Serif}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Section Name}
+
+\begin{frame}{Standard Slide}
+\begin{itemize}
+\item First point
+\item Second point
+\item Third point
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Slide with Block}
+\begin{block}{Block Title}
+This is a standard block useful for definitions or theorems.
+\end{block}
+
+\begin{alertblock}{Alert Block}
+This is an alert block useful for warnings or important notes.
+\end{alertblock}
+
+\begin{exampleblock}{Example Block}
+This is an example block useful for examples.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Two Column Layout}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Left Column}
+\begin{itemize}
+\item Item 1
+\item Item 2
+\end{itemize}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\textbf{Right Column}
+\begin{center}
+% \includegraphics[width=0.8\textwidth]{image-file}
+[Image Placeholder]
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Mathematics}
+
+\begin{frame}{Mathematical Content}
+Equation example:
+$$ E = mc^2 $$
+
+Align environment example:
+\begin{align*}
+f(x) &= x^2 + 2x + 1 \\
+&= (x+1)^2
+\end{align*}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item Summary point 1
+\item Summary point 2
+\end{itemize}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,118 @@
+\documentclass[aspectratio=169, 11pt]{beamer}
+\usetheme{default}
+\usecolortheme{default}
+
+% Typography: Typewriter / Code Style
+\renewcommand{\familydefault}{\ttdefault} % Set default font to typewriter
+\usepackage{courier} % Use Courier font
+
+% Packages
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Color scheme: Terminal Green & Black
+\definecolor{termbg}{RGB}{20, 20, 20}
+\definecolor{termfg}{RGB}{0, 255, 0}
+\definecolor{termcomment}{RGB}{0, 150, 0}
+
+\setbeamercolor{background canvas}{bg=termbg}
+\setbeamercolor{frametitle}{fg=termfg,bg=termbg}
+\setbeamerfont{frametitle}{family=\ttfamily, series=\bfseries}
+\setbeamercolor{title}{fg=termfg}
+\setbeamerfont{title}{family=\ttfamily, series=\bfseries, size=\LARGE}
+\setbeamercolor{structure}{fg=termfg}
+\setbeamercolor{normal text}{fg=termfg}
+
+% Blocks look like code comments or output
+\setbeamercolor{block title}{bg=termbg, fg=termfg}
+\setbeamercolor{block body}{bg=termbg, fg=termcomment}
+\setbeamerfont{block title}{family=\ttfamily}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize item}{>}
+\setbeamertemplate{itemize subitem}{>>}
+
+% Title Information
+\title{Typewriter Theme}
+\subtitle{Code & Terminal Typography}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Section Name}
+
+\begin{frame}{Standard Slide}
+\begin{itemize}
+\item First point
+\item Second point
+\item Third point
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Slide with Block}
+\begin{block}{Block Title}
+This is a standard block useful for definitions or theorems.
+\end{block}
+
+\begin{alertblock}{Alert Block}
+This is an alert block useful for warnings or important notes.
+\end{alertblock}
+
+\begin{exampleblock}{Example Block}
+This is an example block useful for examples.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Two Column Layout}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Left Column}
+\begin{itemize}
+\item Item 1
+\item Item 2
+\end{itemize}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\textbf{Right Column}
+\begin{center}
+% \includegraphics[width=0.8\textwidth]{image-file}
+[Image Placeholder]
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Mathematics}
+
+\begin{frame}{Mathematical Content}
+Equation example:
+$$ E = mc^2 $$
+
+Align environment example:
+\begin{align*}
+f(x) &= x^2 + 2x + 1 \\
+&= (x+1)^2
+\end{align*}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item Summary point 1
+\item Summary point 2
+\end{itemize}
+\end{frame}
+
+\end{document}

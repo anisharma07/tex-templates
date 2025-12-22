@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[colorlinks=true, allcolors=violet]{hyperref}
+
+\definecolor{royalpurple}{RGB}{120,81,169}
+\definecolor{gold}{RGB}{212,175,55}
+
+\lstset{
+    backgroundcolor=\color{white},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{royalpurple},
+    commentstyle=\color{gray},
+    frame=lines,
+    rulecolor=\color{gold},
+    captionpos=b
+}
+
+\newtcolorbox{optimizebox}{colback=royalpurple!5,colframe=royalpurple,title=\textit{Optimization}}
+\newtcolorbox{pitfallbox}{colback=red!5,colframe=red!50!black,title=\textit{Caution}}
+\newtcolorbox{constraintbox}{colback=gold!10,colframe=gold,title=\textit{Constraints}}
+\newtcolorbox{trickbox}{colback=orange!5,colframe=orange,title=\textit{Insight}}
+
+\title{\itshape\Huge The Algorithm Book}
+\author{Elegant Edition}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Chapter One}
+Elegant typography with wide margins.
+
+\begin{constraintbox}
+$N \le 10^5$
+\end{constraintbox}
+
+\section{Implementation}
+\begin{lstlisting}[language=C++]
+// Elegant code
+void solve() {}
+\end{lstlisting}
+
+\end{document}

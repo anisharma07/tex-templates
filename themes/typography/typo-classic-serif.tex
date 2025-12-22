@@ -1,0 +1,115 @@
+\documentclass[aspectratio=169, 11pt]{beamer}
+\usetheme{default}
+\usecolortheme{default}
+
+% Typography: Classic Serif (Palatino)
+\usefonttheme{serif}
+\usepackage{palatino} % Use Palatino font
+\usepackage{eulervm}  % Use Euler math fonts which go well with Palatino
+
+% Packages
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Color scheme: Classic Black & Red
+\definecolor{classicred}{RGB}{150, 0, 0}
+\definecolor{textblack}{RGB}{20, 20, 20}
+
+\setbeamercolor{frametitle}{fg=classicred,bg=white}
+\setbeamerfont{frametitle}{family=\rmfamily, series=\bfseries, size=\Large}
+\setbeamercolor{title}{fg=classicred}
+\setbeamerfont{title}{family=\rmfamily, series=\bfseries, size=\huge}
+\setbeamercolor{structure}{fg=classicred}
+\setbeamercolor{normal text}{fg=textblack,bg=white}
+
+% Serif blocks
+\setbeamerfont{block title}{family=\rmfamily, series=\bfseries}
+\setbeamercolor{block title}{bg=classicred!10, fg=classicred}
+\setbeamercolor{block body}{bg=classicred!5}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% Title Information
+\title{Classic Serif Theme}
+\subtitle{Traditional Academic Typography}
+\author{Author Name}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Section Name}
+
+\begin{frame}{Standard Slide}
+\begin{itemize}
+\item First point with \textbf{bold emphasis}
+\item Second point with \textit{italic emphasis}
+\item Third point
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Slide with Block}
+\begin{block}{Block Title}
+This is a standard block useful for definitions or theorems.
+\end{block}
+
+\begin{alertblock}{Alert Block}
+This is an alert block useful for warnings or important notes.
+\end{alertblock}
+
+\begin{exampleblock}{Example Block}
+This is an example block useful for examples.
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Two Column Layout}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Left Column}
+\begin{itemize}
+\item Item 1
+\item Item 2
+\end{itemize}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\textbf{Right Column}
+\begin{center}
+% \includegraphics[width=0.8\textwidth]{image-file}
+[Image Placeholder]
+\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\section{Mathematics}
+
+\begin{frame}{Mathematical Content}
+Equation example:
+$$ E = mc^2 $$
+
+Align environment example:
+\begin{align*}
+f(x) &= x^2 + 2x + 1 \\
+&= (x+1)^2
+\end{align*}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item Summary point 1
+\item Summary point 2
+\end{itemize}
+\end{frame}
+
+\end{document}

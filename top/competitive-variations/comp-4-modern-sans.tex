@@ -1,0 +1,57 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[colorlinks=true, allcolors=blue!60!black]{hyperref}
+
+% Material Design Colors
+\definecolor{matblue}{RGB}{33,150,243}
+\definecolor{matred}{RGB}{244,67,54}
+\definecolor{matgreen}{RGB}{76,175,80}
+\definecolor{matorange}{RGB}{255,152,0}
+\definecolor{lightgrey}{RGB}{245,245,245}
+
+\lstset{
+    backgroundcolor=\color{lightgrey},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{matblue},
+    commentstyle=\color{gray},
+    stringstyle=\color{matgreen},
+    frame=none,
+    numbers=left,
+    numberstyle=\tiny\color{gray}
+}
+
+% Flat Boxes
+\newtcolorbox{optimizebox}{colback=matblue!10,colframe=matblue,leftrule=3pt,boxrule=0pt,arc=0pt,title=\textbf{Optimization}}
+\newtcolorbox{pitfallbox}{colback=matred!10,colframe=matred,leftrule=3pt,boxrule=0pt,arc=0pt,title=\textbf{Pitfall}}
+\newtcolorbox{constraintbox}{colback=matgreen!10,colframe=matgreen,leftrule=3pt,boxrule=0pt,arc=0pt,title=\textbf{Constraints}}
+\newtcolorbox{trickbox}{colback=matorange!10,colframe=matorange,leftrule=3pt,boxrule=0pt,arc=0pt,title=\textbf{Trick}}
+
+\title{\bfseries Modern Competitive Notes}
+\author{Flat Design}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Overview}
+Clean, modern, sans-serif.
+
+\begin{constraintbox}
+$N \le 10^5$
+\end{constraintbox}
+
+\section{Code}
+\begin{lstlisting}[language=C++]
+// Modern flat design
+void solve() {}
+\end{lstlisting}
+
+\end{document}

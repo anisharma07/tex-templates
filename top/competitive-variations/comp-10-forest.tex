@@ -1,0 +1,50 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{bookman}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[colorlinks=true, allcolors=brown!50!black]{hyperref}
+
+\definecolor{forestgreen}{RGB}{34,139,34}
+\definecolor{saddlebrown}{RGB}{139,69,19}
+\definecolor{beige}{RGB}{245,245,220}
+
+\lstset{
+    backgroundcolor=\color{beige},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{forestgreen},
+    commentstyle=\color{saddlebrown},
+    frame=none,
+    numbers=left
+}
+
+\newtcolorbox{optimizebox}{colback=forestgreen!10,colframe=forestgreen,title=\textbf{Optimization}}
+\newtcolorbox{pitfallbox}{colback=saddlebrown!10,colframe=saddlebrown,title=\textbf{Pitfall}}
+\newtcolorbox{constraintbox}{colback=beige,colframe=black,title=\textbf{Constraints}}
+\newtcolorbox{trickbox}{colback=yellow!20,colframe=orange,title=\textbf{Trick}}
+
+\title{\bfseries Natural Notes}
+\author{Forest Edition}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Overview}
+Earthy tones and Bookman font.
+
+\begin{constraintbox}
+$N \le 10^5$
+\end{constraintbox}
+
+\section{Code}
+\begin{lstlisting}[language=C++]
+// Forest style
+void solve() {}
+\end{lstlisting}
+
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{mathpazo} % Palatino font
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage[colorlinks=true, linkcolor=navy, urlcolor=navy, citecolor=navy]{hyperref}
+
+\definecolor{navy}{RGB}{0,0,128}
+\definecolor{darkred}{RGB}{139,0,0}
+\definecolor{forestgreen}{RGB}{34,139,34}
+\definecolor{goldenrod}{RGB}{218,165,32}
+\definecolor{cream}{RGB}{255,253,240}
+
+\lstset{
+    backgroundcolor=\color{cream},
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{navy}\bfseries,
+    commentstyle=\color{forestgreen}\itshape,
+    stringstyle=\color{darkred},
+    frame=leftline,
+    rulecolor=\color{navy},
+    numbers=left,
+    captionpos=b
+}
+
+\newtcolorbox{optimizebox}{colback=blue!5,colframe=navy,title=\textbf{Optimization}, fonttitle=\bfseries\scshape}
+\newtcolorbox{pitfallbox}{colback=red!5,colframe=darkred,title=\textbf{Pitfall}, fonttitle=\bfseries\scshape}
+\newtcolorbox{constraintbox}{colback=green!5,colframe=forestgreen,title=\textbf{Constraints}, fonttitle=\bfseries\scshape}
+\newtcolorbox{trickbox}{colback=yellow!10,colframe=goldenrod,title=\textbf{Trick}, fonttitle=\bfseries\scshape}
+
+\title{\bfseries\scshape Competitive Programming Notes}
+\author{\itshape Classic Edition}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+Traditional academic style.
+
+\begin{constraintbox}
+Time Limit: 1.0s
+\end{constraintbox}
+
+\section{Implementation}
+\begin{lstlisting}[language=C++]
+#include <iostream>
+// Classic style
+\end{lstlisting}
+
+\end{document}
