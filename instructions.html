@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - LaTeX Templates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8b5cf6;
+            --secondary: #ec4899;
+            --bg-dark: #0f172a;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-hover: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 40%);
+            color: var(--text-main);
+            line-height: 1.7;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 20px 0;
+        }
+
+        .section {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 32px;
+            margin-bottom: 32px;
+            backdrop-filter: blur(12px);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+        }
+
+        .section h3 {
+            font-size: 1.1rem;
+            margin: 24px 0 12px 0;
+            color: var(--primary);
+        }
+
+        .section p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .section ul,
+        .section ol {
+            color: var(--text-muted);
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #c4b5fd;
+        }
+
+        pre {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 16px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 16px 0;
+            border: 1px solid var(--glass-border);
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: #e2e8f0;
+        }
+
+        .method-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 16px 0;
+        }
+
+        .method-card h4 {
+            color: white;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .badge-easy {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .badge-advanced {
+            background: rgba(234, 179, 8, 0.2);
+            color: #eab308;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            padding: 30px;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .section {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📖 How to Use Templates</h1>
+            <a href="index.html" class="back-link">← Back to Templates</a>
+        </header>
+
+        <div class="content">
+            <!-- Quick Start -->
+            <section class="section">
+                <h2>🚀 Quick Start</h2>
+                <p>Choose your preferred method to start using these LaTeX templates:</p>
+
+                <div class="method-card">
+                    <h4>🌐 Overleaf (Recommended for Beginners) <span class="badge badge-easy">Easy</span></h4>
+                    <ol>
+                        <li>Go to <a href="https://www.overleaf.com" target="_blank">Overleaf.com</a> and create a free
+                            account</li>
+                        <li>Click "New Project" → "Blank Project"</li>
+                        <li>Download a template from this site and copy the <code>.tex</code> content</li>
+                        <li>Paste into Overleaf and click "Recompile"</li>
+                    </ol>
+                </div>
+
+                <div class="method-card">
+                    <h4>🤖 AI Tools (Claude, ChatGPT) <span class="badge badge-easy">Easy</span></h4>
+                    <ol>
+                        <li>Download the template <code>.tex</code> file</li>
+                        <li>Open it in any text editor and copy the content</li>
+                        <li>Paste to AI with prompt: <em>"Help me customize this LaTeX template for [your purpose]"</em>
+                        </li>
+                        <li>AI can help you modify content, colors, fonts, and layout</li>
+                    </ol>
+                </div>
+
+                <div class="method-card">
+                    <h4>💻 Local Setup <span class="badge badge-advanced">Advanced</span></h4>
+                    <p>For full offline control, set up LaTeX on your machine.</p>
+                </div>
+            </section>
+
+            <!-- Local Setup Guide -->
+            <section class="section">
+                <h2>🛠️ Local LaTeX Setup</h2>
+
+                <h3>Step 1: Install a TeX Distribution</h3>
+                <p>Choose based on your operating system:</p>
+                <ul>
+                    <li><strong>Windows:</strong> <a href="https://miktex.org/download" target="_blank">MiKTeX</a> or <a
+                            href="https://www.tug.org/texlive/" target="_blank">TeX Live</a></li>
+                    <li><strong>macOS:</strong> <a href="https://www.tug.org/mactex/" target="_blank">MacTeX</a></li>
+                    <li><strong>Linux:</strong> <code>sudo apt install texlive-full</code> (Ubuntu/Debian)</li>
+                </ul>
+
+                <h3>Step 2: Choose an Editor</h3>
+                <ul>
+                    <li><strong>VS Code</strong> with <a
+                            href="https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop"
+                            target="_blank">LaTeX Workshop</a> extension (Recommended)</li>
+                    <li><strong>TeXstudio</strong> - Full-featured LaTeX IDE</li>
+                    <li><strong>Texmaker</strong> - Cross-platform editor</li>
+                </ul>
+
+                <h3>Step 3: Compile Your Document</h3>
+                <pre><code># Using pdflatex (most common)
+pdflatex your-document.tex
+
+# For documents with bibliography
+pdflatex your-document.tex
+bibtex your-document
+pdflatex your-document.tex
+pdflatex your-document.tex
+
+# Using latexmk (automatic)
+latexmk -pdf your-document.tex</code></pre>
+            </section>
+
+            <!-- Editing Tips -->
+            <section class="section">
+                <h2>✏️ Editing Tips</h2>
+
+                <h3>Common Customizations</h3>
+                <ul>
+                    <li><strong>Change colors:</strong> Look for <code>\definecolor</code> or
+                        <code>\setbeamercolor</code></li>
+                    <li><strong>Change fonts:</strong> Modify <code>\usepackage{fontname}</code> in the preamble</li>
+                    <li><strong>Add images:</strong> Use <code>\includegraphics[width=\textwidth]{image.png}</code></li>
+                    <li><strong>Change margins:</strong> Modify <code>\usepackage[margin=1in]{geometry}</code></li>
+                </ul>
+
+                <h3>Template Structure</h3>
+                <pre><code>\documentclass{...}    % Document type
+% Preamble - packages and settings
+\usepackage{...}
+\definecolor{...}
+
+\begin{document}
+% Your content here
+\end{document}</code></pre>
+            </section>
+
+            <!-- Troubleshooting -->
+            <section class="section">
+                <h2>🔧 Troubleshooting</h2>
+
+                <h3>Common Issues</h3>
+                <ul>
+                    <li><strong>Missing package:</strong> Install via your TeX distribution's package manager</li>
+                    <li><strong>Font not found:</strong> Use <code>pdflatex</code> for standard fonts or
+                        <code>xelatex</code>/<code>lualatex</code> for system fonts</li>
+                    <li><strong>Images not showing:</strong> Ensure image path is correct and file exists</li>
+                    <li><strong>Compilation errors:</strong> Check for missing <code>\end{}</code> tags or typos in
+                        commands</li>
+                </ul>
+
+                <h3>Need Help?</h3>
+                <p>Open an issue on <a href="https://github.com/anisharma07/tex-templates/issues"
+                        target="_blank">GitHub</a> or check the LaTeX community at <a
+                        href="https://tex.stackexchange.com" target="_blank">TeX Stack Exchange</a>.</p>
+            </section>
+        </div>
+
+        <footer>
+            <p><strong>LaTeX Templates Collection</strong></p>
+            <p>Created with ❤️ for the LaTeX community</p>
+        </footer>
+    </div>
+</body>
+
+</html>

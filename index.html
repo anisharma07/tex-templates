@@ -82,6 +82,36 @@
             max-width: none;
         }
 
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 100px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            white-space: nowrap;
+        }
+
+        .header-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+        }
+
         .github-link {
             display: inline-flex;
             align-items: center;
@@ -431,6 +461,11 @@
                 font-size: 2rem;
             }
 
+            .header-right {
+                flex-direction: column;
+                gap: 10px;
+            }
+
             .template-grid {
                 grid-template-columns: 1fr;
             }
@@ -479,13 +514,18 @@
                 <h1>LaTeX Templates Collection</h1>
                 <p>Professional templates for notes and presentations</p>
             </div>
-            <a href="https://github.com/anisharma07/tex-templates" class="github-link" target="_blank">
-                <span>View on GitHub</span>
-                <span class="star-separator"></span>
-                <span class="star-count" id="github-stars">
-                    ⭐ ...
-                </span>
-            </a>
+            <div class="header-right">
+                <a href="instructions.html" class="header-link">
+                    📖 How to Use
+                </a>
+                <a href="https://github.com/anisharma07/tex-templates" class="github-link" target="_blank">
+                    <span>View on GitHub</span>
+                    <span class="star-separator"></span>
+                    <span class="star-count" id="github-stars">
+                        ⭐ ...
+                    </span>
+                </a>
+            </div>
         </header>
 
         <div class="tabs-container">
