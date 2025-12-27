@@ -11,75 +11,75 @@
             "templates": [
                 {
                     "name": "Bold Header",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-bold-header.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-bold-header.pdf"
+                    "code": "Presentation-templates/top/template-bold-header.tex",
+                    "pdf": "Presentation-templates/top/template-bold-header.pdf"
                 },
                 {
                     "name": "Madrid Academic",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-madrid-academic.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-madrid-academic.pdf"
+                    "code": "Presentation-templates/top/template-madrid-academic.tex",
+                    "pdf": "Presentation-templates/top/template-madrid-academic.pdf"
                 },
                 {
                     "name": "Minimal Academic",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-minimal-academic.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-minimal-academic.pdf"
+                    "code": "Presentation-templates/top/template-minimal-academic.tex",
+                    "pdf": "Presentation-templates/top/template-minimal-academic.pdf"
                 }
             ]
         },
         {
             "title": "Basic Color Themes",
-            "emoji": "�",
+            "emoji": "🎨",
             "description": "Beamer color themes - use with presentation templates",
             "templates": [
                 {
                     "name": "Burnt Orange",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-burnt-orange.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-burnt-orange.pdf"
+                    "code": "Presentation-templates/basic/theme-burnt-orange.tex",
+                    "pdf": "Presentation-templates/basic/theme-burnt-orange.pdf"
                 },
                 {
                     "name": "Clean Slate",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-clean-slate.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-clean-slate.pdf"
+                    "code": "Presentation-templates/basic/theme-clean-slate.tex",
+                    "pdf": "Presentation-templates/basic/theme-clean-slate.pdf"
                 },
                 {
                     "name": "Corporate Tech",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-corporate-tech.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-corporate-tech.pdf"
+                    "code": "Presentation-templates/basic/theme-corporate-tech.tex",
+                    "pdf": "Presentation-templates/basic/theme-corporate-tech.pdf"
                 },
                 {
                     "name": "Dark Mode",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-dark-mode.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-dark-mode.pdf"
+                    "code": "Presentation-templates/basic/theme-dark-mode.tex",
+                    "pdf": "Presentation-templates/basic/theme-dark-mode.pdf"
                 },
                 {
                     "name": "Deep Ocean",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-deep-ocean.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-deep-ocean.pdf"
+                    "code": "Presentation-templates/basic/theme-deep-ocean.tex",
+                    "pdf": "Presentation-templates/basic/theme-deep-ocean.pdf"
                 },
                 {
                     "name": "Forest Research",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-forest-research.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-forest-research.pdf"
+                    "code": "Presentation-templates/basic/theme-forest-research.tex",
+                    "pdf": "Presentation-templates/basic/theme-forest-research.pdf"
                 },
                 {
                     "name": "Ivy League",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-ivy-league.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-ivy-league.pdf"
+                    "code": "Presentation-templates/basic/theme-ivy-league.tex",
+                    "pdf": "Presentation-templates/basic/theme-ivy-league.pdf"
                 },
                 {
                     "name": "Minimalist Mono",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-minimalist-mono.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-minimalist-mono.pdf"
+                    "code": "Presentation-templates/basic/theme-minimalist-mono.tex",
+                    "pdf": "Presentation-templates/basic/theme-minimalist-mono.pdf"
                 },
                 {
                     "name": "Royal Purple",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-royal-purple.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-royal-purple.pdf"
+                    "code": "Presentation-templates/basic/theme-royal-purple.tex",
+                    "pdf": "Presentation-templates/basic/theme-royal-purple.pdf"
                 },
                 {
                     "name": "Solarized Light",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-solarized-light.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-solarized-light.pdf"
+                    "code": "Presentation-templates/basic/theme-solarized-light.tex",
+                    "pdf": "Presentation-templates/basic/theme-solarized-light.pdf"
                 }
             ]
         },
@@ -90,53 +90,53 @@
             "templates": [
                 {
                     "name": "Avant Garde",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-avant-garde.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-avant-garde.pdf"
+                    "code": "Presentation-templates/fonts/font-avant-garde.tex",
+                    "pdf": "Presentation-templates/fonts/font-avant-garde.pdf"
                 },
                 {
                     "name": "Bera Serif",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-bera-serif.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-bera-serif.pdf"
+                    "code": "Presentation-templates/fonts/font-bera-serif.tex",
+                    "pdf": "Presentation-templates/fonts/font-bera-serif.pdf"
                 },
                 {
                     "name": "Bookman",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-bookman.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-bookman.pdf"
+                    "code": "Presentation-templates/fonts/font-bookman.tex",
+                    "pdf": "Presentation-templates/fonts/font-bookman.pdf"
                 },
                 {
                     "name": "Charter",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-charter.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-charter.pdf"
+                    "code": "Presentation-templates/fonts/font-charter.tex",
+                    "pdf": "Presentation-templates/fonts/font-charter.pdf"
                 },
                 {
                     "name": "Courier",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-courier.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-courier.pdf"
+                    "code": "Presentation-templates/fonts/font-courier.tex",
+                    "pdf": "Presentation-templates/fonts/font-courier.pdf"
                 },
                 {
                     "name": "Helvetica",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-helvetica.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-helvetica.pdf"
+                    "code": "Presentation-templates/fonts/font-helvetica.tex",
+                    "pdf": "Presentation-templates/fonts/font-helvetica.pdf"
                 },
                 {
                     "name": "Latin Modern",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-latin-modern.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-latin-modern.pdf"
+                    "code": "Presentation-templates/fonts/font-latin-modern.tex",
+                    "pdf": "Presentation-templates/fonts/font-latin-modern.pdf"
                 },
                 {
                     "name": "Palatino",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-palatino.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-palatino.pdf"
+                    "code": "Presentation-templates/fonts/font-palatino.tex",
+                    "pdf": "Presentation-templates/fonts/font-palatino.pdf"
                 },
                 {
                     "name": "Times",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-times.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-times.pdf"
+                    "code": "Presentation-templates/fonts/font-times.tex",
+                    "pdf": "Presentation-templates/fonts/font-times.pdf"
                 },
                 {
                     "name": "Utopia",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-utopia.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-utopia.pdf"
+                    "code": "Presentation-templates/fonts/font-utopia.tex",
+                    "pdf": "Presentation-templates/fonts/font-utopia.pdf"
                 }
             ]
         },
@@ -147,28 +147,28 @@
             "templates": [
                 {
                     "name": "Classic Serif",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-classic-serif.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-classic-serif.pdf"
+                    "code": "Presentation-templates/typography/typo-classic-serif.tex",
+                    "pdf": "Presentation-templates/typography/typo-classic-serif.pdf"
                 },
                 {
                     "name": "Elegant Light",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-elegant-light.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-elegant-light.pdf"
+                    "code": "Presentation-templates/typography/typo-elegant-light.tex",
+                    "pdf": "Presentation-templates/typography/typo-elegant-light.pdf"
                 },
                 {
                     "name": "Large Bold",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-large-bold.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-large-bold.pdf"
+                    "code": "Presentation-templates/typography/typo-large-bold.tex",
+                    "pdf": "Presentation-templates/typography/typo-large-bold.pdf"
                 },
                 {
                     "name": "Modern Sans",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-modern-sans.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-modern-sans.pdf"
+                    "code": "Presentation-templates/typography/typo-modern-sans.tex",
+                    "pdf": "Presentation-templates/typography/typo-modern-sans.pdf"
                 },
                 {
                     "name": "Typewriter",
-                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-typewriter.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-typewriter.pdf"
+                    "code": "Presentation-templates/typography/typo-typewriter.tex",
+                    "pdf": "Presentation-templates/typography/typo-typewriter.pdf"
                 }
             ]
         }

@@ -11,18 +11,21 @@
             "templates": [
                 {
                     "name": "Minimalist",
-                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-minimalist.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-minimalist.pdf"
+                    "code": "Resume/basic/resume-minimalist.tex",
+                    "pdf": "Resume/basic/resume-minimalist.pdf",
+                    "image": "Resume/images/basic-resume-minimalist.png"
                 },
                 {
                     "name": "Academic",
-                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-academic.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-academic.pdf"
+                    "code": "Resume/basic/resume-academic.tex",
+                    "pdf": "Resume/basic/resume-academic.pdf",
+                    "image": "Resume/images/basic-resume-academic.png"
                 },
                 {
                     "name": "Modern Text",
-                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-modern-text.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-modern-text.pdf"
+                    "code": "Resume/basic/resume-modern-text.tex",
+                    "pdf": "Resume/basic/resume-modern-text.pdf",
+                    "image": "Resume/images/basic-resume-modern-text.png"
                 }
             ]
         },
@@ -33,18 +36,21 @@
             "templates": [
                 {
                     "name": "Sidebar Profile",
-                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-sidebar.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-sidebar.pdf"
+                    "code": "Resume/basic-photo/resume-sidebar.tex",
+                    "pdf": "Resume/basic-photo/resume-sidebar.pdf",
+                    "image": "Resume/images/basic-photo-resume-sidebar.png"
                 },
                 {
                     "name": "Header Profile",
-                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-header.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-header.pdf"
+                    "code": "Resume/basic-photo/resume-header.tex",
+                    "pdf": "Resume/basic-photo/resume-header.pdf",
+                    "image": "Resume/images/basic-photo-resume-header.png"
                 },
                 {
                     "name": "Creative Split",
-                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-creative.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-creative.pdf"
+                    "code": "Resume/basic-photo/resume-creative.tex",
+                    "pdf": "Resume/basic-photo/resume-creative.pdf",
+                    "image": "Resume/images/basic-photo-resume-creative.png"
                 }
             ]
         }
