@@ -529,14 +529,14 @@
         </header>
 
         <div class="tabs-container">
-            <button class="tab-btn active" onclick="switchTab('notes')">
-                📝 Note Templates
+            <button class="tab-btn active" onclick="switchTab('presentations')">
+                � Presentation Templates
+            </button>
+            <button class="tab-btn" onclick="switchTab('notes')">
+                � Note Templates
             </button>
             <button class="tab-btn" onclick="switchTab('cheatsheets')">
-                📑 Cheat Sheet Templates
-            </button>
-            <button class="tab-btn" onclick="switchTab('presentations')">
-                📊 Presentation Templates
+                � Cheat Sheet Templates
             </button>
             <button class="tab-btn" onclick="switchTab('resumes')">
                 💼 Resume Templates
@@ -545,18 +545,19 @@
 
         <div class="mobile-select-container">
             <select class="mobile-select" id="mobile-tab-select" onchange="switchTab(this.value)">
-                <option value="notes">📝 Note Templates</option>
-                <option value="cheatsheets">📑 Cheat Sheet Templates</option>
-                <option value="presentations">📊 Presentation Templates</option>
+                <option value="presentations">� Presentation Templates</option>
+                <option value="notes">� Note Templates</option>
+                <option value="cheatsheets">� Cheat Sheet Templates</option>
                 <option value="resumes">💼 Resume Templates</option>
             </select>
         </div>
 
         <div class="content">
             <!-- Containers for dynamic content -->
-            <div id="notes-tab" class="category-section tab-content active" data-source="notes.json"></div>
+            <div id="presentations-tab" class="category-section tab-content active" data-source="presentations.json">
+            </div>
+            <div id="notes-tab" class="category-section tab-content" data-source="notes.json"></div>
             <div id="cheatsheets-tab" class="category-section tab-content" data-source="cheatsheets.json"></div>
-            <div id="presentations-tab" class="category-section tab-content" data-source="presentations.json"></div>
             <div id="resumes-tab" class="category-section tab-content" data-source="resume.json"></div>
         </div>
 
@@ -704,13 +705,13 @@
 
         // Initial Load
         document.addEventListener('DOMContentLoaded', () => {
-            // Load the initial tab (Notes)
-            loadTabData('notes');
+            // Load the initial tab (Presentations)
+            loadTabData('presentations');
 
             // Optional: Lazy load others after a delay
             setTimeout(() => {
+                loadTabData('notes');
                 loadTabData('cheatsheets');
-                loadTabData('presentations');
                 loadTabData('resumes');
             }, 1000);
         });
