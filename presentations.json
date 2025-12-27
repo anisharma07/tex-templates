@@ -12,17 +12,20 @@
                 {
                     "name": "Bold Header",
                     "code": "Presentation-templates/top/template-bold-header.tex",
-                    "pdf": "Presentation-templates/top/template-bold-header.pdf"
+                    "pdf": "Presentation-templates/top/template-bold-header.pdf",
+                    "image": "Presentation-templates/images/bold-header-minimal-academic.png"
                 },
                 {
                     "name": "Madrid Academic",
                     "code": "Presentation-templates/top/template-madrid-academic.tex",
-                    "pdf": "Presentation-templates/top/template-madrid-academic.pdf"
+                    "pdf": "Presentation-templates/top/template-madrid-academic.pdf",
+                    "image": "Presentation-templates/images/madrid-academic.png"
                 },
                 {
                     "name": "Minimal Academic",
                     "code": "Presentation-templates/top/template-minimal-academic.tex",
-                    "pdf": "Presentation-templates/top/template-minimal-academic.pdf"
+                    "pdf": "Presentation-templates/top/template-minimal-academic.pdf",
+                    "image": "Presentation-templates/images/minimal-academic.png"
                 }
             ]
         },
@@ -34,52 +37,62 @@
                 {
                     "name": "Burnt Orange",
                     "code": "Presentation-templates/basic/theme-burnt-orange.tex",
-                    "pdf": "Presentation-templates/basic/theme-burnt-orange.pdf"
+                    "pdf": "Presentation-templates/basic/theme-burnt-orange.pdf",
+                    "image": "Presentation-templates/images/burnt-orange.png"
                 },
                 {
                     "name": "Clean Slate",
                     "code": "Presentation-templates/basic/theme-clean-slate.tex",
-                    "pdf": "Presentation-templates/basic/theme-clean-slate.pdf"
+                    "pdf": "Presentation-templates/basic/theme-clean-slate.pdf",
+                    "image": "Presentation-templates/images/clean-slate.png"
                 },
                 {
                     "name": "Corporate Tech",
                     "code": "Presentation-templates/basic/theme-corporate-tech.tex",
-                    "pdf": "Presentation-templates/basic/theme-corporate-tech.pdf"
+                    "pdf": "Presentation-templates/basic/theme-corporate-tech.pdf",
+                    "image": "Presentation-templates/images/corporate-tech.png"
                 },
                 {
                     "name": "Dark Mode",
                     "code": "Presentation-templates/basic/theme-dark-mode.tex",
-                    "pdf": "Presentation-templates/basic/theme-dark-mode.pdf"
+                    "pdf": "Presentation-templates/basic/theme-dark-mode.pdf",
+                    "image": "Presentation-templates/images/dark-mode.png"
                 },
                 {
                     "name": "Deep Ocean",
                     "code": "Presentation-templates/basic/theme-deep-ocean.tex",
-                    "pdf": "Presentation-templates/basic/theme-deep-ocean.pdf"
+                    "pdf": "Presentation-templates/basic/theme-deep-ocean.pdf",
+                    "image": "Presentation-templates/images/deap-ocean.png"
                 },
                 {
                     "name": "Forest Research",
                     "code": "Presentation-templates/basic/theme-forest-research.tex",
-                    "pdf": "Presentation-templates/basic/theme-forest-research.pdf"
+                    "pdf": "Presentation-templates/basic/theme-forest-research.pdf",
+                    "image": "Presentation-templates/images/forest-research.png"
                 },
                 {
                     "name": "Ivy League",
                     "code": "Presentation-templates/basic/theme-ivy-league.tex",
-                    "pdf": "Presentation-templates/basic/theme-ivy-league.pdf"
+                    "pdf": "Presentation-templates/basic/theme-ivy-league.pdf",
+                    "image": "Presentation-templates/images/ivleague.png"
                 },
                 {
                     "name": "Minimalist Mono",
                     "code": "Presentation-templates/basic/theme-minimalist-mono.tex",
-                    "pdf": "Presentation-templates/basic/theme-minimalist-mono.pdf"
+                    "pdf": "Presentation-templates/basic/theme-minimalist-mono.pdf",
+                    "image": "Presentation-templates/images/minimalists-mono.png"
                 },
                 {
                     "name": "Royal Purple",
                     "code": "Presentation-templates/basic/theme-royal-purple.tex",
-                    "pdf": "Presentation-templates/basic/theme-royal-purple.pdf"
+                    "pdf": "Presentation-templates/basic/theme-royal-purple.pdf",
+                    "image": "Presentation-templates/images/royal-purple.png"
                 },
                 {
                     "name": "Solarized Light",
                     "code": "Presentation-templates/basic/theme-solarized-light.tex",
-                    "pdf": "Presentation-templates/basic/theme-solarized-light.pdf"
+                    "pdf": "Presentation-templates/basic/theme-solarized-light.pdf",
+                    "image": "Presentation-templates/images/solarized-light.png"
                 }
             ]
         },
@@ -91,52 +104,62 @@
                 {
                     "name": "Avant Garde",
                     "code": "Presentation-templates/fonts/font-avant-garde.tex",
-                    "pdf": "Presentation-templates/fonts/font-avant-garde.pdf"
+                    "pdf": "Presentation-templates/fonts/font-avant-garde.pdf",
+                    "image": "Presentation-templates/images/avante.png"
                 },
                 {
                     "name": "Bera Serif",
                     "code": "Presentation-templates/fonts/font-bera-serif.tex",
-                    "pdf": "Presentation-templates/fonts/font-bera-serif.pdf"
+                    "pdf": "Presentation-templates/fonts/font-bera-serif.pdf",
+                    "image": "Presentation-templates/images/bera-serif.png"
                 },
                 {
                     "name": "Bookman",
                     "code": "Presentation-templates/fonts/font-bookman.tex",
-                    "pdf": "Presentation-templates/fonts/font-bookman.pdf"
+                    "pdf": "Presentation-templates/fonts/font-bookman.pdf",
+                    "image": "Presentation-templates/images/bookman.png"
                 },
                 {
                     "name": "Charter",
                     "code": "Presentation-templates/fonts/font-charter.tex",
-                    "pdf": "Presentation-templates/fonts/font-charter.pdf"
+                    "pdf": "Presentation-templates/fonts/font-charter.pdf",
+                    "image": "Presentation-templates/images/charter.png"
                 },
                 {
                     "name": "Courier",
                     "code": "Presentation-templates/fonts/font-courier.tex",
-                    "pdf": "Presentation-templates/fonts/font-courier.pdf"
+                    "pdf": "Presentation-templates/fonts/font-courier.pdf",
+                    "image": "Presentation-templates/images/courier.png"
                 },
                 {
                     "name": "Helvetica",
                     "code": "Presentation-templates/fonts/font-helvetica.tex",
-                    "pdf": "Presentation-templates/fonts/font-helvetica.pdf"
+                    "pdf": "Presentation-templates/fonts/font-helvetica.pdf",
+                    "image": "Presentation-templates/images/helvetica.png"
                 },
                 {
                     "name": "Latin Modern",
                     "code": "Presentation-templates/fonts/font-latin-modern.tex",
-                    "pdf": "Presentation-templates/fonts/font-latin-modern.pdf"
+                    "pdf": "Presentation-templates/fonts/font-latin-modern.pdf",
+                    "image": "Presentation-templates/images/latin-modern.png"
                 },
                 {
                     "name": "Palatino",
                     "code": "Presentation-templates/fonts/font-palatino.tex",
-                    "pdf": "Presentation-templates/fonts/font-palatino.pdf"
+                    "pdf": "Presentation-templates/fonts/font-palatino.pdf",
+                    "image": "Presentation-templates/images/palatino.png"
                 },
                 {
                     "name": "Times",
                     "code": "Presentation-templates/fonts/font-times.tex",
-                    "pdf": "Presentation-templates/fonts/font-times.pdf"
+                    "pdf": "Presentation-templates/fonts/font-times.pdf",
+                    "image": "Presentation-templates/images/times.png"
                 },
                 {
                     "name": "Utopia",
                     "code": "Presentation-templates/fonts/font-utopia.tex",
-                    "pdf": "Presentation-templates/fonts/font-utopia.pdf"
+                    "pdf": "Presentation-templates/fonts/font-utopia.pdf",
+                    "image": "Presentation-templates/images/utopia.png"
                 }
             ]
         },
@@ -148,27 +171,32 @@
                 {
                     "name": "Classic Serif",
                     "code": "Presentation-templates/typography/typo-classic-serif.tex",
-                    "pdf": "Presentation-templates/typography/typo-classic-serif.pdf"
+                    "pdf": "Presentation-templates/typography/typo-classic-serif.pdf",
+                    "image": "Presentation-templates/images/classic-sans.png"
                 },
                 {
                     "name": "Elegant Light",
                     "code": "Presentation-templates/typography/typo-elegant-light.tex",
-                    "pdf": "Presentation-templates/typography/typo-elegant-light.pdf"
+                    "pdf": "Presentation-templates/typography/typo-elegant-light.pdf",
+                    "image": "Presentation-templates/images/elegant-light.png"
                 },
                 {
                     "name": "Large Bold",
                     "code": "Presentation-templates/typography/typo-large-bold.tex",
-                    "pdf": "Presentation-templates/typography/typo-large-bold.pdf"
+                    "pdf": "Presentation-templates/typography/typo-large-bold.pdf",
+                    "image": "Presentation-templates/images/large-bold.png"
                 },
                 {
                     "name": "Modern Sans",
                     "code": "Presentation-templates/typography/typo-modern-sans.tex",
-                    "pdf": "Presentation-templates/typography/typo-modern-sans.pdf"
+                    "pdf": "Presentation-templates/typography/typo-modern-sans.pdf",
+                    "image": "Presentation-templates/images/modern-sans.png"
                 },
                 {
                     "name": "Typewriter",
                     "code": "Presentation-templates/typography/typo-typewriter.tex",
-                    "pdf": "Presentation-templates/typography/typo-typewriter.pdf"
+                    "pdf": "Presentation-templates/typography/typo-typewriter.pdf",
+                    "image": "Presentation-templates/images/typewriter.png"
                 }
             ]
         }
