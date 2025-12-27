@@ -350,6 +350,44 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
 
+        .mobile-select-container {
+            display: none;
+            margin: 0 auto 40px auto;
+            max-width: 300px;
+        }
+
+        .mobile-select {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            color: white;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 20px;
+            backdrop-filter: blur(16px);
+        }
+
+        .mobile-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.3);
+        }
+
+        .mobile-select option {
+            background: #1e293b;
+            color: white;
+            padding: 12px;
+        }
+
         .tab-btn {
             background: transparent;
             border: none;
@@ -400,10 +438,23 @@
             .tabs-container {
                 flex-direction: column;
                 align-items: stretch;
+                position: relative;
+                top: 0;
+                border-radius: 16px;
+                max-width: 100%;
+                margin: 0 0 30px 0;
+                display: none;
             }
 
             .tab-btn {
                 text-align: center;
+                padding: 12px 16px;
+                border-radius: 12px;
+                font-size: 0.95rem;
+            }
+
+            .mobile-select-container {
+                display: block;
             }
         }
 
@@ -450,6 +501,15 @@
             <button class="tab-btn" onclick="switchTab('resumes')">
                 💼 Resume Templates
             </button>
+        </div>
+
+        <div class="mobile-select-container">
+            <select class="mobile-select" id="mobile-tab-select" onchange="switchTab(this.value)">
+                <option value="notes">📝 Note Templates</option>
+                <option value="cheatsheets">📑 Cheat Sheet Templates</option>
+                <option value="presentations">📊 Presentation Templates</option>
+                <option value="resumes">💼 Resume Templates</option>
+            </select>
         </div>
 
         <div class="content">
@@ -587,6 +647,12 @@
             });
 
             if (clickedBtn) clickedBtn.classList.add('active');
+
+            // Sync mobile select dropdown
+            const mobileSelect = document.getElementById('mobile-tab-select');
+            if (mobileSelect && mobileSelect.value !== tabName) {
+                mobileSelect.value = tabName;
+            }
 
             // Activate Content and Load Data
             const contentId = `${tabName}-tab`;
