@@ -45,64 +45,79 @@
         }
 
         header {
-            text-align: center;
-            padding: 80px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
             margin-bottom: 40px;
             position: relative;
         }
 
         header::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            background: var(--primary);
-            filter: blur(100px);
-            z-index: -1;
-            opacity: 0.5;
+            display: none;
+            /* Remove large glow effect for compact view or adjust */
+        }
+
+        header .header-left {
+            display: flex;
+            flex-direction: column;
         }
 
         header h1 {
-            font-size: 3.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
             background: linear-gradient(to right, #fff, #cbd5e1);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+            text-shadow: none;
         }
 
         header p {
-            font-size: 1.25rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 32px;
+            margin: 0;
+            max-width: none;
         }
 
         .github-link {
             display: inline-flex;
             align-items: center;
-            padding: 12px 32px;
+            gap: 12px;
+            padding: 8px 16px;
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: 100px;
             color: white;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            white-space: nowrap;
         }
 
         .github-link:hover {
             background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+            transform: translateY(-1px);
             border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+        }
+
+        .star-separator {
+            width: 1px;
+            height: 14px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .star-count {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #fbbf24;
+            font-weight: 600;
         }
 
         .content {
@@ -290,13 +305,78 @@
             text-shadow: 0 0 10px var(--secondary);
         }
 
+        /* Tab Styles */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 0 auto 40px auto;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(16px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            padding: 8px;
+            border-radius: 100px;
+            max-width: fit-content;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 100px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .template-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .tabs-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .tab-btn {
+                text-align: center;
             }
         }
 
@@ -317,604 +397,40 @@
 <body>
     <div class="container">
         <header>
-            <h1>📚 LaTeX Templates Collection</h1>
-            <p>Professional templates for notes and presentations</p>
+            <div class="header-left">
+                <h1>LaTeX Templates Collection</h1>
+                <p>Professional templates for notes and presentations</p>
+            </div>
             <a href="https://github.com/anisharma07/tex-templates" class="github-link" target="_blank">
-                View on GitHub →
+                <span>View on GitHub</span>
+                <span class="star-separator"></span>
+                <span class="star-count" id="github-stars">
+                    ⭐ ...
+                </span>
             </a>
         </header>
 
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="switchTab('notes')">
+                📝 Note Templates
+            </button>
+            <button class="tab-btn" onclick="switchTab('cheatsheets')">
+                📑 Cheat Sheet Templates
+            </button>
+            <button class="tab-btn" onclick="switchTab('presentations')">
+                📊 Presentation Templates
+            </button>
+            <button class="tab-btn" onclick="switchTab('resumes')">
+                💼 Resume Templates
+            </button>
+        </div>
+
         <div class="content">
-            <!-- ==================== NOTE TEMPLATES ==================== -->
-            <div class="category-section">
-                <h1 class="category-title">
-                    📝 Note Templates
-                </h1>
-
-                <!-- Main Note Templates -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <span class="emoji">⭐</span>
-                        Main Templates
-                    </h2>
-                    <p class="section-description">Complete, ready-to-use note-taking templates</p>
-                    <div class="template-grid">
-                        <div class="template-card">
-                            <div class="template-name">Textbook Style</div>
-                            <div class="template-desc">Traditional academic textbook format with theorem environments
-                                and formal structure</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/template-textbook-style.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/template-textbook-style.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Advanced Competitive</div>
-                            <div class="template-desc">Optimized for competitive programming with constraint boxes,
-                                tricks,
-                                and code snippets</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/template-advanced-competitive.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/template-advanced-competitive.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Competitive Programming Variations -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <span class="emoji">🎨</span>
-                        Style Variations
-                        <span class="badge badge-new">NEW</span>
-                    </h2>
-                    <p class="section-description">10 unique styles for competitive programming notes</p>
-                    <div class="template-grid">
-                        <div class="template-card">
-                            <div class="template-name">Dark Neon</div>
-                            <div class="template-desc">Dark mode with vibrant neon accents - perfect for screen reading
-                            </div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-1-dark-neon.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-1-dark-neon.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Minimalist B&W</div>
-                            <div class="template-desc">Clean black and white with sharp corners - printer friendly</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-2-minimalist.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-2-minimalist.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Classic Serif</div>
-                            <div class="template-desc">Academic style with Palatino font and navy/dark red colors</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-3-classic-serif.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-3-classic-serif.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Modern Sans</div>
-                            <div class="template-desc">Flat design with Material Design colors and Helvetica font</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-4-modern-sans.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-4-modern-sans.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Retro Terminal</div>
-                            <div class="template-desc">Hacker aesthetic with monospace fonts and green terminal style
-                            </div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-5-retro-terminal.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-5-retro-terminal.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Soft Pastel</div>
-                            <div class="template-desc">Rounded corners with Charter font and gentle pastel colors</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-6-soft-pastel.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-6-soft-pastel.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">High Contrast</div>
-                            <div class="template-desc">Thick borders and primary colors - maximum readability</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-7-high-contrast.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-7-high-contrast.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Elegant Book</div>
-                            <div class="template-desc">Linux Libertine font with gold/purple theme and wide margins
-                            </div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-8-elegant-book.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-8-elegant-book.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Two Column</div>
-                            <div class="template-desc">Landscape 2-column layout - perfect for cheat sheets</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-9-two-column.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-9-two-column.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Forest Theme</div>
-                            <div class="template-desc">Earth tones with Bookman font - green/brown/beige palette</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-10-forest.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-10-forest.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <!-- Cheat Sheet Templates -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <span class="emoji">📑</span>
-                        Cheat Sheet Templates
-                        <span class="badge badge-new">NEW</span>
-                    </h2>
-                    <p class="section-description">Quick reference guides in Landscape and Portrait formats</p>
-                    <div class="template-grid">
-                        <div class="template-card">
-                            <div class="template-name">Minimalist (Landscape)</div>
-                            <div class="template-desc">Clean, serif-based academic look (Palatino)</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-minimal.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-minimal.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Modern Blue (Landscape)</div>
-                            <div class="template-desc">Helvetica-based corporate aesthetic</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-modern.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-modern.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Dark Mode (Landscape)</div>
-                            <div class="template-desc">High-contrast screen-optimized dark theme</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-dark.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-dark.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Boxed (Landscape)</div>
-                            <div class="template-desc">Modular layout with rounded section boxes</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-boxed.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-boxed.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Retro Terminal (Landscape)</div>
-                            <div class="template-desc">Monospace green-on-black hacker style</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-retro.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-retro.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Modern (Portrait)</div>
-                            <div class="template-desc">A4 Portrait version of Modern Blue style</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-modern.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-modern.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Minimal (Portrait)</div>
-                            <div class="template-desc">Clean academic style in portrait format</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-minimal.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-minimal.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Boxed (Portrait)</div>
-                            <div class="template-desc">Organized sections with light/pastel boxes</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-boxed.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-boxed.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Swiss (Portrait)</div>
-                            <div class="template-desc">Bold typography and grid-based design</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-swiss.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-swiss.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Elegant (Portrait)</div>
-                            <div class="template-desc">Classic book design with Charter font</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-elegant.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Notes-Templates/cheatsheets/cheat-sheet-portrait-elegant.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- ==================== PRESENTATION TEMPLATES ==================== -->
-            <div class="category-section">
-                <h1 class="category-title">
-                    📊 Presentation Templates
-                </h1>
-
-                <!-- Main Presentation Templates -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <span class="emoji">⭐</span>
-                        Main Templates
-                    </h2>
-                    <p class="section-description">Professional presentation templates</p>
-                    <div class="template-grid">
-                        <div class="template-card">
-                            <div class="template-name">Bold Header</div>
-                            <div class="template-desc">Minimalist template with bold section headers</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-bold-header.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-bold-header.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Madrid Academic</div>
-                            <div class="template-desc">Classic academic presentation style</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-madrid-academic.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-madrid-academic.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Minimal Academic</div>
-                            <div class="template-desc">Clean, distraction-free academic template</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-minimal-academic.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-minimal-academic.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Basic Color Themes -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <span class="emoji">🎭</span>
-                        Basic Color Themes
-                    </h2>
-                    <p class="section-description">Beamer color themes - use with presentation templates</p>
-                    <div class="template-grid">
-                        <div class="template-card">
-                            <div class="template-name">Burnt Orange</div>
-                            <div class="template-desc">Warm orange color scheme</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-burnt-orange.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-burnt-orange.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Clean Slate</div>
-                            <div class="template-desc">Minimal neutral colors</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-clean-slate.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-clean-slate.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Corporate Tech</div>
-                            <div class="template-desc">Professional blue scheme</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-corporate-tech.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-corporate-tech.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Dark Mode</div>
-                            <div class="template-desc">Dark background theme</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-dark-mode.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-dark-mode.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Deep Ocean</div>
-                            <div class="template-desc">Blue-green aquatic theme</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-deep-ocean.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-deep-ocean.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Forest Research</div>
-                            <div class="template-desc">Green nature-inspired theme</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-forest-research.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-forest-research.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Ivy League</div>
-                            <div class="template-desc">Classic academic style</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-ivy-league.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-ivy-league.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Minimalist Mono</div>
-                            <div class="template-desc">Black and white simplicity</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-minimalist-mono.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-minimalist-mono.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Royal Purple</div>
-                            <div class="template-desc">Elegant purple tones</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-royal-purple.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-royal-purple.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Solarized Light</div>
-                            <div class="template-desc">Popular Solarized palette</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-solarized-light.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-solarized-light.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Font Variations -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <span class="emoji">✍️</span>
-                        Font Variations
-                    </h2>
-                    <p class="section-description">Different font families for varied typographic styles</p>
-                    <div class="template-grid">
-                        <div class="template-card">
-                            <div class="template-name">Avant Garde</div>
-                            <div class="template-desc">Modern geometric sans-serif</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-avant-garde.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-avant-garde.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Bera Serif</div>
-                            <div class="template-desc">Bitstream Vera based serif</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-bera-serif.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-bera-serif.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Bookman</div>
-                            <div class="template-desc">Classic readable serif</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-bookman.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-bookman.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Charter</div>
-                            <div class="template-desc">Bitstream Charter typeface</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-charter.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-charter.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Courier</div>
-                            <div class="template-desc">Monospace typewriter style</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-courier.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-courier.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Helvetica</div>
-                            <div class="template-desc">Clean Swiss sans-serif</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-helvetica.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-helvetica.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Latin Modern</div>
-                            <div class="template-desc">Enhanced Computer Modern</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-latin-modern.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-latin-modern.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Palatino</div>
-                            <div class="template-desc">Elegant Renaissance serif</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-palatino.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-palatino.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Times</div>
-                            <div class="template-desc">Classic newspaper serif</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-times.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-times.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Utopia</div>
-                            <div class="template-desc">Adobe's versatile serif</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-utopia.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/fonts/font-utopia.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Typography Variations -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <span class="emoji">📖</span>
-                        Typography Styles
-                    </h2>
-                    <p class="section-description">Different typographic approaches for presentations</p>
-                    <div class="template-grid">
-                        <div class="template-card">
-                            <div class="template-name">Classic Serif</div>
-                            <div class="template-desc">Traditional serif typography</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-classic-serif.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-classic-serif.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Elegant Light</div>
-                            <div class="template-desc">Light weight refined typography</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-elegant-light.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-elegant-light.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Large Bold</div>
-                            <div class="template-desc">Big, impactful typography</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-large-bold.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-large-bold.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                        <div class="template-card">
-                            <div class="template-name">Modern Sans</div>
-                            <div class="template-desc">Contemporary sans-serif design</div>
-                            <div class="template-links">
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-modern-sans.tex"
-                                    class="btn btn-code" target="_blank">View Code</a>
-                                <a href="https://anisharma07.github.io/tex-templates/Presentation-templates/typography/typo-modern-sans.pdf"
-                                    class="btn btn-preview" target="_blank">Preview PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
+            <!-- Containers for dynamic content -->
+            <div id="notes-tab" class="category-section tab-content active" data-source="notes.json"></div>
+            <div id="cheatsheets-tab" class="category-section tab-content" data-source="cheatsheets.json"></div>
+            <div id="presentations-tab" class="category-section tab-content" data-source="presentations.json"></div>
+            <div id="resumes-tab" class="category-section tab-content" data-source="resume.json"></div>
         </div>
 
         <footer>
@@ -927,6 +443,142 @@
             </p>
         </footer>
     </div>
+    <script>
+        // Cache for loaded data
+        const templateCache = {};
+
+        // Fetch GitHub Stars
+        async function fetchGitHubStars() {
+            const starsElement = document.getElementById('github-stars');
+            try {
+                const response = await fetch('https://api.github.com/repos/anisharma07/tex-templates');
+                const data = await response.json();
+                if (data.stargazers_count !== undefined) {
+                    starsElement.innerHTML = `⭐ ${data.stargazers_count}`;
+                } else {
+                    starsElement.innerText = '⭐ Star';
+                }
+            } catch (error) {
+                console.error('Error fetching stars:', error);
+                starsElement.innerText = '⭐ Star';
+            }
+        }
+
+        fetchGitHubStars();
+
+        // Template Rendering Function
+        function renderTemplates(containerId, data) {
+            const container = document.getElementById(containerId);
+            if (!container || !data) return;
+
+            // Render Main Header for the Category
+            let html = `
+                <h1 class="category-title" style="display:none;">
+                    ${data.header.title}
+                </h1>
+            `;
+
+            // Render Sections
+            data.sections.forEach(section => {
+                html += `
+                    <section class="section">
+                        <h2 class="section-title">
+                            <span class="emoji">${section.emoji || ''}</span>
+                            ${section.title}
+                            ${section.badge ? `<span class="badge badge-${section.badge.toLowerCase()}">${section.badge}</span>` : ''}
+                        </h2>
+                        ${section.description ? `<p class="section-description">${section.description}</p>` : ''}
+                        <div class="template-grid">
+                `;
+
+                // Render Cards
+                section.templates.forEach(template => {
+                    html += `
+                        <div class="template-card">
+                            <div class="template-name">${template.name}</div>
+                             <!-- Description container removed to hide it -->
+                            <div class="template-links">
+                                <a href="${template.code}" class="btn btn-code" target="_blank">View Code</a>
+                                <a href="${template.pdf}" class="btn btn-preview" target="_blank">Preview PDF</a>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                html += `
+                        </div>
+                    </section>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        // Load Data for a Tab
+        async function loadTabData(tabName) {
+            const containerId = `${tabName}-tab`;
+            const container = document.getElementById(containerId);
+            const source = container.getAttribute('data-source');
+
+            if (templateCache[tabName]) {
+                // If the container is empty but we have data in cache, likely first render after switch??
+                // No, renderTemplates fills the container. If it's empty, we should re-render.
+                if (container.innerHTML.trim() === '') {
+                    renderTemplates(containerId, templateCache[tabName]);
+                }
+                return;
+            }
+
+            try {
+                const response = await fetch(source);
+                const data = await response.json();
+                templateCache[tabName] = data;
+                renderTemplates(containerId, data);
+            } catch (error) {
+                console.error(`Error loading data for ${tabName}:`, error);
+                container.innerHTML = `<p class="error">Failed to load templates. Please try again later.</p>`;
+            }
+        }
+
+        // Switch Tab Function
+        function switchTab(tabName) {
+            // Remove active class from buttons and contents
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            // Activate button
+            const clickedBtn = Array.from(document.querySelectorAll('.tab-btn')).find(btn => {
+                const text = btn.innerText.toLowerCase();
+                if (tabName === 'cheatsheets') return text.includes('cheat sheet');
+                if (tabName === 'notes') return text.includes('note') && !text.includes('cheat');
+                if (tabName === 'presentations') return text.includes('presentation');
+                if (tabName === 'resumes') return text.includes('resume');
+                return false;
+            });
+
+            if (clickedBtn) clickedBtn.classList.add('active');
+
+            // Activate Content and Load Data
+            const contentId = `${tabName}-tab`;
+            document.getElementById(contentId).classList.add('active');
+
+            // Load data for this tab
+            loadTabData(tabName);
+        }
+
+        // Initial Load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load the initial tab (Notes)
+            loadTabData('notes');
+
+            // Optional: Lazy load others after a delay
+            setTimeout(() => {
+                loadTabData('cheatsheets');
+                loadTabData('presentations');
+                loadTabData('resumes');
+            }, 1000);
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,88 @@
+% Modern Text Resume Template
+% Author: Anirudh Sharma
+% License: MIT
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[default]{lato} % Needs lato font installed, or switch to helvet
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% Colors
+\definecolor{accent}{RGB}{43, 88, 118}
+\definecolor{textgray}{RGB}{60, 60, 60}
+
+% Commands
+\newcommand{\name}[1]{
+    \centerline{\Huge\bfseries\color{accent} #1}
+    \vspace{5pt}
+}
+
+\newcommand{\contact}[4]{
+    \centerline{\color{textgray} #1 $\cdot$ #2 $\cdot$ #3 $\cdot$ #4}
+    \vspace{10pt}
+    \hrule
+    \vspace{10pt}
+}
+
+\newcommand{\sectiontitle}[1]{
+    \vspace{10pt}
+    {\Large\bfseries\color{accent} #1} \\
+    \vspace{-5pt}
+}
+
+\newcommand{\role}[3]{
+    \noindent\textbf{#1} \hfill \textit{#2} \\
+    \textit{\color{textgray} #3}
+    \vspace{2pt}
+}
+
+\begin{document}
+
+\name{ALEXANDER HAMILTON}
+\contact{New York, NY}{alex.hamilton@email.com}{+1-555-0101}{\href{https://linkedin.com/in/alex}{linkedin.com/in/alex}}
+
+\sectiontitle{SUMMARY}
+Driven and innovative Financial Analyst with 5+ years of experience in economic policy, debt restructuring, and fiscal planning. Proven track record of establishing financial systems from scratch and writing compelling reports.
+
+\sectiontitle{EXPERIENCE}
+
+\role{The Treasury Dept.}{Secretary of the Treasury}{1789 -- 1795}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Established the First Bank of the United States, stabilizing the national economy.
+    \item Authored major economic reports including the Report on Public Credit.
+    \item Managed national debt restructuring and implemented a federal tax system.
+\end{itemize}
+
+\vspace{5pt}
+
+\role{Continental Army}{Aide-de-Camp to General Washington}{1777 -- 1781}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Handled correspondence and strategic planning for the Commander-in-Chief.
+    \item Led a battalion in the decisive Battle of Yorktown.
+\end{itemize}
+
+\sectiontitle{EDUCATION}
+
+\role{King's College (Columbia University)}{Bachelor of Arts}{1774 -- 1776}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Studies interrupted by the Revolutionary War.
+    \item Founder of a literary debating society.
+\end{itemize}
+
+\sectiontitle{SKILLS}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item \textbf{Financial Analysis:} Debt Structuring, Central Banking, Taxation Policy
+    \item \textbf{Writing:} Policy Papers, Federalist Papers (wrote 51 of 85), Correspondence
+    \item \textbf{Languages:} English (Native), French (Fluent)
+\end{itemize}
+
+\sectiontitle{PROJECTS}
+\noindent\textbf{The Federalist Papers} \\
+Co-authored a series of 85 essays arguing for the ratification of the United States Constitution. Played a key role in interpreting and promoting the Constitution's intent.
+
+\end{document}

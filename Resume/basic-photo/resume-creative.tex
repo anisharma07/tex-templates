@@ -1,0 +1,127 @@
+% Creative Split Resume Template
+% Author: Anirudh Sharma
+% License: MIT
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{geometry}
+\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm}
+\usepackage{xcolor}
+\usepackage{paracol} % For split columns
+\usepackage{graphicx}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Colors
+\definecolor{primary}{RGB}{30, 30, 30}
+\definecolor{secondary}{HTML}{4b7bec} 
+\definecolor{darktext}{RGB}{50, 50, 50}
+
+% Column setup
+\columnratio{0.35} % Left column width ratio
+
+\newcommand{\sectionheader}[1]{
+    \vspace{10pt}
+    {\large\bfseries\color{secondary} #1} \\
+    \vspace{-2pt}
+    {\color{secondary}\hrule}
+    \vspace{5pt}
+}
+
+\begin{document}
+
+\begin{paracol}{2}
+
+% --- LEFT COLUMN ---
+\begin{center}
+    % Photo - assumes square or circular crop logic or simple placement
+    \includegraphics[width=0.7\linewidth]{example-photo.jpg} 
+    
+    \vspace{10pt}
+    
+    {\Huge\bfseries\color{primary} SARAH \vspace{2pt}\\ CONNOR}
+    
+    \vspace{5pt}
+    
+    {\large\color{secondary} PRODUCT MANAGER}
+\end{center}
+
+\vspace{1cm}
+
+\sectionheader{CONTACT}
+\faPhone \hspace{5pt} +1 987 654 3210 \\
+\faEnvelope \hspace{5pt} sarah@connor.com \\
+\faLinkedin \hspace{5pt} linkedin.com/in/sarah \\
+\faMapMarker \hspace{5pt} Los Angeles, CA
+
+\vspace{1cm}
+
+\sectionheader{SKILLS}
+\textbf{Product Management} \\
+Roadmapping, Agile/Scrum, User Research, A/B Testing \\
+
+\vspace{5pt}
+
+\textbf{Tools} \\
+Jira, Confluence, Trello, Figma, Google Analytics, SQL \\
+
+\vspace{1cm}
+
+\sectionheader{EDUCATION}
+\textbf{MBA}, 2018 \\
+\textit{Stanford University} \\
+
+\vspace{5pt}
+
+\textbf{B.S. Computer Science}, 2014 \\
+\textit{UCLA}
+
+\switchcolumn 
+% --- RIGHT COLUMN ---
+\vspace{0.5cm}
+
+\sectionheader{PROFILE}
+Strategic and data-driven Product Manager with over 6 years of experience leading cross-functional teams to build and launch successful digital products. Expert in translating user needs into technical requirements and business value.
+
+\sectionheader{WORK EXPERIENCE}
+
+\textbf{Senior Product Manager} \hfill 2021 -- Present \\
+\textit{Tech Innovations Inc.}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Spearheaded the launch of the flagship mobile app, acquiring 1M+ users in the first year.
+    \item Defined product vision and strategy, aligning stakeholders across engineering, design, and marketing.
+    \item Increased user retention by 15% through data-driven feature optimizations.
+\end{itemize}
+
+\vspace{10pt}
+
+\textbf{Product Manager} \hfill 2018 -- 2021 \\
+\textit{StartUp IO}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Managed the product lifecycle from ideation to release for a B2B SaaS platform.
+    \item Conducted user interviews and market analysis to identify key pain points and opportunities.
+    \item Prioritized the product backlog to ensure timely delivery of high-value features.
+\end{itemize}
+
+\vspace{10pt}
+
+\textbf{Business Analyst} \hfill 2014 -- 2016 \\
+\textit{Consulting Group}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Analyzed business processes and recommended improvements to increase operational efficiency.
+    \item Created detailed documentation and requirements specifications for client projects.
+\end{itemize}
+
+\sectionheader{CERTIFICATIONS}
+\begin{itemize}[leftmargin=1.5em, noitemsep]
+    \item Certified Scrum Product Owner (CSPO)
+    \item Google Analytics Individual Qualification
+\end{itemize}
+
+\end{paracol}
+
+\end{document}

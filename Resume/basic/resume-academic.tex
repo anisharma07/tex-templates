@@ -1,0 +1,104 @@
+% Academic Resume/CV Template
+% Author: Anirudh Sharma
+% License: MIT
+
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{left=0.75in, right=0.75in, top=0.6in, bottom=0.6in}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Custom colors
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,      
+    urlcolor=darkblue,
+}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries\color{darkblue}
+}{}{0em}{}[\color{darkblue}\titlerule \vspace{-3pt}]
+
+% Custom commands
+\newcommand{\header}[4]{
+    \begin{center}
+        {\Huge \scshape #1} \\ \vspace{2pt}
+        #2 \\
+        #3 \\
+        #4
+    \end{center}
+}
+
+\newcommand{\entry}[4]{
+    \vspace{-1pt}
+    \noindent\textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill \textit{#4} \\ \vspace{-6pt}
+}
+
+\newcommand{\pubentry}[3]{
+    \item \textbf{#1} (#2). ``#3''. \textit{Journal of LaTeX Templates}.
+}
+
+\begin{document}
+
+% Header
+\header{Jane Doe, Ph.D.}
+{123 Academic Way, College Town, State 12345}
+{jane.doe@university.edu | +1 (555) 123-4567}
+{\href{https://janedoe.com}{janedoe.com} | \href{https://github.com/janedoe}{github.com/janedoe}}
+
+% Content
+\section{Education}
+\entry{University of Science}{City, State}{Ph.D. in Physics}{Aug 2018 -- May 2023}
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Thesis: ``Analysis of Quantum Fields in Curved Spacetime''
+    \item Advisor: Prof. Albert Einstein
+\end{itemize}
+\vspace{4pt}
+\entry{State University}{City, State}{B.S. in Physics, Summa Cum Laude}{Aug 2014 -- May 2018}
+
+\section{Research Interests}
+Quantum Mechanics, General Relativity, Computational Physics, Scientific Computing
+
+\section{Experience}
+\entry{University of Science}{City, State}{Postdoctoral Researcher}{Jun 2023 -- Present}
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Conducting research on dark matter candidates using large-scale simulations.
+    \item Mentoring 3 graduate students and organizing weekly seminar series.
+\end{itemize}
+\vspace{6pt}
+\entry{National Lab}{City, State}{Research Intern}{May 2021 -- Aug 2021}
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Developed Python scripts to analyze particle collision data from the LHC.
+    \item Presented findings at the Annual Physics Conference.
+\end{itemize}
+
+\section{Publications}
+\begin{enumerate}[leftmargin=*]
+    \pubentry{Doe, J., Smith, A.}{2023}{New constraints on dark energy models}
+    \pubentry{Doe, J.}{2022}{Efficient algorithms for tensor network contractions}
+    \pubentry{Einstein, A., Doe, J.}{2021}{Gravitational waves in early universe}
+\end{enumerate}
+
+\section{Awards \& Grants}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item \textbf{NSF Graduate Research Fellowship} (2019 -- 2022)
+    \item \textbf{University Best Thesis Award} (2023)
+    \item \textbf{Dean's List} (All semesters, 2014 -- 2018)
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Programming:} Python, C++, MATLAB, Mathematica \\
+\textbf{Tools:} LaTeX, Git, Docker, Linux, High-Performance Computing (HPC)
+
+\end{document}

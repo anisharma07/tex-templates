@@ -1,0 +1,52 @@
+{
+    "header": {
+        "title": "💼 Resume Templates",
+        "description": "Professional resume templates for every career stage"
+    },
+    "sections": [
+        {
+            "title": "Basic Resumes",
+            "emoji": "📄",
+            "description": "Clean, text-focused templates suitable for ATS",
+            "templates": [
+                {
+                    "name": "Minimalist",
+                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-minimalist.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-minimalist.pdf"
+                },
+                {
+                    "name": "Academic",
+                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-academic.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-academic.pdf"
+                },
+                {
+                    "name": "Modern Text",
+                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-modern-text.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic/resume-modern-text.pdf"
+                }
+            ]
+        },
+        {
+            "title": "Resumes with Photo",
+            "emoji": "📸",
+            "description": "Professional layouts including a profile photo",
+            "templates": [
+                {
+                    "name": "Sidebar Profile",
+                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-sidebar.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-sidebar.pdf"
+                },
+                {
+                    "name": "Header Profile",
+                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-header.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-header.pdf"
+                },
+                {
+                    "name": "Creative Split",
+                    "code": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-creative.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Resume/basic-photo/resume-creative.pdf"
+                }
+            ]
+        }
+    ]
+}

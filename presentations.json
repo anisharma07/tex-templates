@@ -1,0 +1,57 @@
+{
+    "header": {
+        "title": "📊 Presentation Templates",
+        "description": "Professional presentation templates"
+    },
+    "sections": [
+        {
+            "title": "Main Templates",
+            "emoji": "⭐",
+            "description": "Professional presentation templates",
+            "templates": [
+                {
+                    "name": "Bold Header",
+                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-bold-header.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-bold-header.pdf"
+                },
+                {
+                    "name": "Madrid Academic",
+                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-madrid-academic.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-madrid-academic.pdf"
+                },
+                {
+                    "name": "Minimal Academic",
+                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-minimal-academic.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/top/template-minimal-academic.pdf"
+                }
+            ]
+        },
+        {
+            "title": "Basic Color Themes",
+            "emoji": "🎭",
+            "description": "Beamer color themes - use with presentation templates",
+            "templates": [
+                {
+                    "name": "Burnt Orange",
+                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-burnt-orange.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-burnt-orange.pdf"
+                },
+                {
+                    "name": "Clean Slate",
+                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-clean-slate.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-clean-slate.pdf"
+                },
+                {
+                    "name": "Corporate Tech",
+                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-corporate-tech.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-corporate-tech.pdf"
+                },
+                {
+                    "name": "Dark Mode",
+                    "code": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-dark-mode.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Presentation-templates/basic/theme-dark-mode.pdf"
+                }
+            ]
+        }
+    ]
+}

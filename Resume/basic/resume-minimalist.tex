@@ -1,0 +1,142 @@
+% Minimalist Resume Template
+% Author: Anirudh Sharma
+% License: MIT
+
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+% Formatting
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://linkedin.com/in/johndoe}{\Large John Doe}} & Email : \href{mailto:john@doe.com}{john@doe.com}\\
+  \href{http://johndoe.com}{http://www.johndoe.com} & Mobile : +1-123-456-7890 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Technology}{City, State}
+      {Bachelor of Science in Computer Science;  GPA: 3.90/4.00}{Aug. 2018 -- May 2022}
+    \resumeSubheading
+      {High School Name}{City, State}
+      {High School Diploma; GPA: 4.00/4.00}{Aug. 2014 -- May 2018}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Tech Company Inc.}{City, State}
+      {Software Engineer Intern}{May 2021 -- Aug 2021}
+      \resumeItemListStart
+        \resumeItem{Developed a scalable REST API using Python and Flask to serve machine learning models.}
+        \resumeItem{Implemented CI/CD pipelines using Jenkins to automate testing and deployment.}
+        \resumeItem{Collaborated with cross-functional teams to define project requirements and deliverables.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Startup LLC}{City, State}
+      {Frontend Developer Intern}{May 2020 -- Aug 2020}
+      \resumeItemListStart
+        \resumeItem{Redesigned the user interface using React.js, improving user engagement by 20\%.}
+        \resumeItem{Optimized web application performance, reducing load times by 30\%.}
+        \resumeItem{Integrated third-party APIs for payment processing and data visualization.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Project Name}{Sep 2021}
+      {Personal Project}{}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack web application for task management using MERN stack.}
+        \resumeItem{Implemented user authentication and authorization using JWT.}
+        \resumeItem{Deployed the application on AWS EC2 instances.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Another Project}{Jan 2021}
+      {Hackathon Project}{}
+      \resumeItemListStart
+        \resumeItem{Developed a mobile app for community service tracking using Flutter.}
+        \resumeItem{Won 1st place in the university hackathon among 50+ teams.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Python, Java, C++, JavaScript, SQL}
+      \hfill
+      \textbf{Technologies}{: AWS, Docker, Git, Linux, React}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,94 @@
+% Header Resume Template with Photo
+% Author: Anirudh Sharma
+% License: MIT
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato} 
+\usepackage{geometry}
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Colors
+\definecolor{headerblue}{RGB}{20, 30, 48}
+\definecolor{accent}{RGB}{43, 88, 118}
+
+% Custom section
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\Large\color{accent}
+}{}{0em}{}[\titlerule \vspace{-5pt}]
+
+\begin{document}
+
+% Header
+\noindent
+\begin{minipage}{0.15\textwidth}
+    % Photo placeholder - replace example-image with actual photo file
+    \includegraphics[width=\linewidth,height=1.3\linewidth,keepaspectratio]{example-image} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.82\textwidth}
+    {\Huge\bfseries\color{headerblue} JOHN SMITH} \\[5pt]
+    {\Large\color{accent} Software Engineer} \\[10pt]
+    \href{mailto:john.smith@email.com}{john.smith@email.com} $\cdot$ +1 (555) 000-0000 $\cdot$ London, UK \\
+    \href{https://linkedin.com/in/johnsmith}{linkedin.com/in/johnsmith} $\cdot$ \href{https://github.com/johnsmith}{github.com/johnsmith}
+\end{minipage}
+
+\vspace{0.5cm}
+
+% Summary
+\section{Professional Summary}
+Results-oriented Software Engineer with 4 years of experience in full-stack web development. Proficient in JavaScript, Python, and cloud technologies. Strong problem-solving skills and a passion for building scalable, user-friendly applications.
+
+% Experience
+\section{Experience}
+
+\textbf{Software Engineer II} \hfill Oct 2021 -- Present \\
+\textit{Global Tech Solutions, London}
+\begin{itemize}[noitemsep]
+    \item Developed and maintained microservices using Node.js and improved system uptime by 99.9\%.
+    \item Implemented a real-time notification system using WebSockets and Redis.
+    \item Conducted code reviews and mentored 2 junior developers.
+\end{itemize}
+
+\vspace{5pt}
+
+\textbf{Junior Developer} \hfill Jun 2019 -- Sep 2021 \\
+\textit{Creative Apps Ltd, Manchester}
+\begin{itemize}[noitemsep]
+    \item Collaborated with the design team to implement responsive UI/UX using React.
+    \item Optimized SQL database queries, reducing API response time by 40\%.
+\end{itemize}
+
+% Education
+\section{Education}
+
+\textbf{Bachelor of Science in Computer Science} \hfill 2015 -- 2019 \\
+\textit{University of Manchester, UK} \\
+First Class Honours
+
+% Skills
+\section{Technical Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Languages & JavaScript (ES6+), Python, Java, SQL, HTML5, CSS3 \\
+Frameworks & React, Node.js, Express, Django, Flask \\
+Tools & Git, Docker, AWS (EC2, S3), Jira, Agile/Scrum
+\end{tabular}
+
+% Projects
+\section{Projects}
+
+\textbf{E-commerce Platform}
+\begin{itemize}[noitemsep]
+    \item Built a fully functional e-commerce site with payment gateway integration using Stripe.
+    \item Deployed on AWS using Docker containers for scalability.
+\end{itemize}
+
+\end{document}

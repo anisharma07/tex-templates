@@ -1,0 +1,131 @@
+% Sidebar Resume Template with Photo
+% Author: Anirudh Sharma
+% License: MIT
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{geometry}
+\geometry{left=0cm,right=0cm,top=0cm,bottom=0cm}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Colors
+\definecolor{sidebarcolor}{RGB}{43, 88, 118}
+\definecolor{maincolor}{RGB}{255, 255, 255}
+\definecolor{accent}{RGB}{43, 88, 118}
+\definecolor{textwhite}{RGB}{255, 255, 255}
+\definecolor{textgray}{RGB}{60, 60, 60}
+
+% Commands
+\newcommand{\sectiontitle}[1]{
+    \vspace{10pt}
+    {\Large\bfseries\color{accent} #1} \\
+    \vspace{-5pt}
+    \rule{\linewidth}{0.5pt}
+    \vspace{8pt}
+}
+
+\newcommand{\sidebarsectiontitle}[1]{
+    \vspace{10pt}
+    {\Large\bfseries\color{textwhite} #1} \\
+    \vspace{-5pt}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture,overlay]
+    % Sidebar
+    \node [rectangle, fill=sidebarcolor, anchor=north west, minimum width=0.33\paperwidth, minimum height=\paperheight] (sidebar) at (current page.north west){};
+\end{tikzpicture}
+
+\begin{minipage}[t]{0.33\textwidth}
+    \vspace{0.5cm}
+    \begin{center}
+        \begin{tikzpicture}
+            % Placeholder for circle photo
+            \clip (0,0) circle (2cm);
+            \node at (0,0) {\includegraphics[width=4cm]{example-photo.jpg}}; % User needs to replace this
+            % Fallback text if no image
+        \end{tikzpicture}
+        
+        \vspace{0.5cm}
+        
+        {\Huge\bfseries\color{textwhite} JANE DOE} \\
+        \vspace{0.2cm}
+        {\Large\color{textwhite} Graphic Designer}
+    \end{center}
+    
+    \vspace{1cm}
+    \hspace{0.5cm} \begin{minipage}{0.28\textwidth}
+        \color{textwhite}
+        
+        \sidebarsectiontitle{CONTACT}
+        \sidebarsectiontitle{} % Spacing hack or just vspace
+        \faPhone \hspace{0.2cm} +1 234 567 890 \\ \vspace{0.2cm}
+        \faEnvelope \hspace{0.2cm} jane.doe@email.com \\ \vspace{0.2cm}
+        \faMapMarker \hspace{0.2cm} San Francisco, CA \\ \vspace{0.2cm}
+        \faGlobe \hspace{0.2cm} janedoe.design
+        
+        \vspace{1cm}
+        
+        \sidebarsectiontitle{SKILLS}
+        Adobe Photoshop \\
+        Adobe Illustrator \\
+        Figma \\
+        UI/UX Design \\
+        HTML/CSS
+        
+        \vspace{1cm}
+        
+        \sidebarsectiontitle{LANGUAGES}
+        English (Native) \\
+        Spanish (Fluent) \\
+        French (Basic)
+        
+    \end{minipage}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.62\textwidth}
+    \vspace{1cm}
+    \color{textgray}
+    
+    \sectiontitle{PROFILE}
+    Creative and detail-oriented Graphic Designer with 5+ years of experience in digital marketing and brand identity. Passionate about creating user-centric designs that drive engagement and solve complex problems.
+    
+    \sectiontitle{EXPERIENCE}
+    
+    \textbf{Senior Designer} \hfill 2020 -- Present \\
+    \textit{Creative Studio, San Francisco}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Led the design team in rebranding projects for 3 major tech startups, resulting in a 40\% increase in brand recognition.
+        \item Mentored junior designers and established a design system to streamline workflows.
+    \end{itemize}
+    
+    \vspace{10pt}
+    
+    \textbf{Graphic Designer} \hfill 2017 -- 2020 \\
+    \textit{Marketing Agency, New York}
+    \begin{itemize}[leftmargin=1.5em]
+        \item Designed marketing collateral for social media campaigns, print ads, and websites.
+        \item Collaborated with copywriters and marketing managers to deliver on-time projects.
+    \end{itemize}
+    
+    \sectiontitle{EDUCATION}
+    
+    \textbf{Bachelor of Fine Arts in Design} \hfill 2013 -- 2017 \\
+    \textit{Art Institute, Chicago}
+    
+    \sectiontitle{PROJECTS}
+    
+    \textbf{Eco-Friendly App Redesign} \\
+    Redesigned the UI for a sustainability tracking app, improving user retention by 25\%.
+    
+\end{minipage}
+
+\end{document}

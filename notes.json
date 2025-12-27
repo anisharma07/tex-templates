@@ -1,0 +1,83 @@
+{
+    "header": {
+        "title": "📝 Note Templates",
+        "description": "Complete, ready-to-use note-taking templates"
+    },
+    "sections": [
+        {
+            "title": "Main Templates",
+            "emoji": "⭐",
+            "description": "Complete, ready-to-use note-taking templates",
+            "templates": [
+                {
+                    "name": "Textbook Style",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/template-textbook-style.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/template-textbook-style.pdf"
+                },
+                {
+                    "name": "Advanced Competitive",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/template-advanced-competitive.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/template-advanced-competitive.pdf"
+                }
+            ]
+        },
+        {
+            "title": "Style Variations",
+            "emoji": "🎨",
+            "description": "10 unique styles for competitive programming notes",
+            "badge": "NEW",
+            "templates": [
+                {
+                    "name": "Dark Neon",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-1-dark-neon.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-1-dark-neon.pdf"
+                },
+                {
+                    "name": "Minimalist B&W",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-2-minimalist.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-2-minimalist.pdf"
+                },
+                {
+                    "name": "Classic Serif",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-3-classic-serif.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-3-classic-serif.pdf"
+                },
+                {
+                    "name": "Modern Sans",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-4-modern-sans.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-4-modern-sans.pdf"
+                },
+                {
+                    "name": "Retro Terminal",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-5-retro-terminal.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-5-retro-terminal.pdf"
+                },
+                {
+                    "name": "Soft Pastel",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-6-soft-pastel.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-6-soft-pastel.pdf"
+                },
+                {
+                    "name": "High Contrast",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-7-high-contrast.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-7-high-contrast.pdf"
+                },
+                {
+                    "name": "Elegant Book",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-8-elegant-book.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-8-elegant-book.pdf"
+                },
+                {
+                    "name": "Two Column",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-9-two-column.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-9-two-column.pdf"
+                },
+                {
+                    "name": "Forest Theme",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-10-forest.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-10-forest.pdf"
+                }
+            ]
+        }
+    ]
+}
