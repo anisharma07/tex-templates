@@ -11,6 +11,11 @@
             "badge": "NEW",
             "templates": [
                 {
+                    "name": "Two Column",
+                    "code": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-9-two-column.tex",
+                    "pdf": "https://anisharma07.github.io/tex-templates/Notes-Templates/competitive-variations/comp-9-two-column.pdf"
+                },
+                {
                     "name": "Minimalist (Landscape)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-minimal.tex",
                     "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-minimal.pdf"
