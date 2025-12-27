@@ -156,13 +156,40 @@
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: 24px;
-            padding: 24px;
+            padding: 0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(12px);
             display: flex;
             flex-direction: column;
+        }
+
+        .template-card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .template-card.no-image {
+            padding: 24px;
+        }
+
+        .template-card.no-image .template-card-content {
+            padding: 0;
+        }
+
+        .template-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--glass-border);
+            transition: transform 0.4s ease;
+        }
+
+        .template-card:hover .template-image {
+            transform: scale(1.05);
         }
 
         .template-card::before {
@@ -493,13 +520,16 @@
 
                 // Render Cards
                 section.templates.forEach(template => {
+                    const hasImage = template.image ? true : false;
                     html += `
-                        <div class="template-card">
-                            <div class="template-name">${template.name}</div>
-                             <!-- Description container removed to hide it -->
-                            <div class="template-links">
-                                <a href="${template.code}" class="btn btn-code" target="_blank">View Code</a>
-                                <a href="${template.pdf}" class="btn btn-preview" target="_blank">Preview PDF</a>
+                        <div class="template-card ${hasImage ? '' : 'no-image'}">
+                            ${hasImage ? `<img src="${template.image}" alt="${template.name}" class="template-image" loading="lazy" onerror="this.style.display='none'">` : ''}
+                            <div class="template-card-content">
+                                <div class="template-name">${template.name}</div>
+                                <div class="template-links">
+                                    <a href="${template.code}" class="btn btn-code" target="_blank">View Code</a>
+                                    <a href="${template.pdf}" class="btn btn-preview" target="_blank">Preview PDF</a>
+                                </div>
                             </div>
                         </div>
                     `;

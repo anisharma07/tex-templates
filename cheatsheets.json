@@ -18,52 +18,62 @@
                 {
                     "name": "Minimalist (Landscape)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-minimal.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-minimal.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-minimal.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/sheet-minimal.png"
                 },
                 {
                     "name": "Modern Blue (Landscape)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-modern.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-modern.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-modern.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/modern-blue.png"
                 },
                 {
                     "name": "Dark Mode (Landscape)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-dark.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-dark.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-dark.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/sheet-dark.png"
                 },
                 {
                     "name": "Boxed (Landscape)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-boxed.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-boxed.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-boxed.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/sheet-boxed.png"
                 },
                 {
                     "name": "Retro Terminal (Landscape)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-retro.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-retro.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-retro.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/sheet-retro.png"
                 },
                 {
                     "name": "Modern (Portrait)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-modern.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-modern.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-modern.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/modern-portrait.png"
                 },
                 {
                     "name": "Minimal (Portrait)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-minimal.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-minimal.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-minimal.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/minimal-portrait.png"
                 },
                 {
                     "name": "Boxed (Portrait)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-boxed.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-boxed.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-boxed.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/sheet-boxed-portrait.png"
                 },
                 {
                     "name": "Swiss (Portrait)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-swiss.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-swiss.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-swiss.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/swiss-portrait.png"
                 },
                 {
                     "name": "Elegant (Portrait)",
                     "code": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-elegant.tex",
-                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-elegant.pdf"
+                    "pdf": "https://anisharma07.github.io/tex-templates/cheatsheets/cheat-sheet-portrait-elegant.pdf",
+                    "image": "https://anisharma07.github.io/tex-templates/cheatsheets/images/elegant-portrait.png"
                 }
             ]
         }
