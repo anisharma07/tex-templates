@@ -13,7 +13,8 @@
                 {
                     "name": "Two Column",
                     "code": "Notes-Templates/competitive-variations/comp-9-two-column.tex",
-                    "pdf": "Notes-Templates/competitive-variations/comp-9-two-column.pdf"
+                    "pdf": "Notes-Templates/competitive-variations/comp-9-two-column.pdf",
+                    "image": "cheatsheets/images/two-column.png"
                 },
                 {
                     "name": "Minimalist (Landscape)",
